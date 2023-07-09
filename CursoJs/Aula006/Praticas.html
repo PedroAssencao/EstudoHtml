@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nome = prompt('Digite seu Nome')
+        var idade = prompt('Digite Sua Idade')
+        var Salario = prompt('Digite seu Salario')
+        document.write(`Ola <strong>${nome}<strong/> seu nome tem ${nome.length} Letras <br/>`)
+        document.write(`Seu seu nome em letras Maísculas fica assim ${nome.toUpperCase()} <br/>`)
+        if (idade <= 30) {
+            document.write(`Sua Idade e ${idade} uma idade Jovem! <br/>`)   
+        }else{
+            document.write(`Sua Idade e ${idade} uma idade Senior! <br/>`)   
+        }
+        if (Salario >= 1300) {
+            document.write(`Seu Salario e ${Salario} É maior do que um salario minimo :) <br/>`)   
+        }else{
+
+            document.write(`Seu Salario e ${Salario} Ele e Menor que Um salario :( <br/>`)   
+
+        }
+    </script>
+</body>
+</html>
