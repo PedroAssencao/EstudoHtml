@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Começa Apartir da pagina 26-->
+    <title>Somando Numeros</title>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="inpt1" id="inpt1">
+    <input type="number" name="inpt2" id="inpt2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res">Resultado</div>
+    <script>
+        function somar() {
+            var i1 = document.getElementById('inpt1')
+             var i2 = document.getElementById('inpt2')
+             var res = document.getElementById('res')
+            var n1 = Number(i1.value)
+            var n2 = Number(i2.value)
+            var somar = n1 + n2
+            res.innerHTML = ('O resultado da Soma é: ' + somar)
+
+        }
+        
+    </script>
+</body>
+</html>

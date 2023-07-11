@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Aula 10 começa na pagina 21 do carderno-->
+    <style>
+        div#area{
+
+            background-color: green;
+            font-size: 12pt;
+            color: white;
+            width: 20vw;
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <!--Se não for usar os metodos onclick="clicar()" onmouseenter="entrou()" onmouseout="saiu()" onmousedown="Segurou()" no proprio javaScript
+    tem que adicionar os addEventListner() -->
+    <div id="area">
+        interaja...
+    </div>
+    <script>
+         var a = document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrou)
+        a.addEventListener('mouseout', saiu)
+        a.addEventListener('mousedown', Segurou)
+        function clicar() {
+           
+            a.innerHTML = 'Clickou!'
+            a.style.background = 'black'
+            
+        }
+
+        function entrou() {
+
+            a.innerHTML = 'Entrou!'
+            a.style.background = 'yellow'
+
+        }
+    
+        function saiu() {
+
+            a.innerHTML = 'Saiu!'
+            a.style.backgroundColor = 'red'
+
+        }
+
+        function Segurou(){
+
+            a.innerHTML = 'Segurou'
+            a.style.background = 'purple'
+
+        }
+    </script>
+</body>
+</html>
