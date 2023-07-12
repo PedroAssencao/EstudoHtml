@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Multas</title>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <input type="number" name="" id="in1" placeholder="Digite a velocidade Do veiculo">
+    <button onclick="multa()">Checar Multa</button>
+    <div id="show">O carro: </div>
+    <script>
+        function multa() {
+        var a = document.getElementById('in1')
+        var b = Number(a.value)
+        var show = document.querySelector('div#show')
+        if (b >=60) {
+            show.innerHTML = `A velocidade de ${b} esta acima da permitida na via, O carro Sera Multado`
+        }else{
+        
+            show.innerHTML = `A Velocidade de ${b} e permitida na via, carro Liberado Sem Multa!`
+        
+        }
+        }
+       
+    </script>
+</body>
+</html>

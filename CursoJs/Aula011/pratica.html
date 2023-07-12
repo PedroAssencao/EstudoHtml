@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pais</title>
+</head>
+<body>
+    <h1>Digite o pais em que voce mora</h1>
+    <input type="text" id="in1">
+    <div id="show"></div>
+    <button onclick="verificar()">Verifica Pais</button>
+    <script>
+
+        
+            
+            var a = document.getElementById('in1')
+            var show = document.getElementById('show')
+
+        function verificar(){
+          
+
+        if (a.value.toLowerCase() == 'brasil') {
+            show.innerHTML = 'Voce e Brasileiro!' + '</br>'
+            show.innerHTML += 'Que Otimo!'
+        }else{
+
+            show.innerHTML = 'Voce não e Brasileiro' + '</br>'
+            show.innerHTML += 'Que Legal'
+
+        }
+
+        }
+    
+    </script>
+</body>
+</html>
