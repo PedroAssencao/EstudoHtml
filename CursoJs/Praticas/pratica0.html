@@ -5,78 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
-
-            background: #154c79;
-            margin: 0;
-            padding: 0;
+        body {
+          color: white;
+          font-family: Arial, Helvetica, sans-serif;
+          background: #154c79;
+          margin: 0;
+          padding: 0;
         }
-
-        .box{
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: white;
-            border-radius: 20px;
-            height: 40vh;
-            width: 30vw;
-            margin: auto;    
-
+      
+        .box {
+          display: flex;
+          flex-direction: column; 
+          justify-content: center;
+          align-items: center;
+          background: white;
+          border-radius: 20px;
+          height: 40vh;
+          width: 45vw;
+          margin: auto;
         }
-
-        h1{
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 20vh;
-
+      
+        .teste1 {
+          display: flex;
+          margin: 2vh auto;
+          color: black;
+          justify-content: center;
+          align-items: center;
+         
         }
-
-        h2{
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
+      
+        .hora {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 10vh;
         }
-
-        .image{
-
-            max-height: 8vh;
-            max-width: 2vw;
-            border-radius: 100px;
-
+      
+        h2 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
-        
-        .div2{
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+      
+        .div1 {
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          order: -1;
+         
         }
-     
-    </style>
+      
+        .div2 {
+          display: flex;
+          justify-content: center;
+          order: 1;
+        }
+      
+        .image {
+          max-width: 70vw;
+          border-radius: 50%;
+          display: flex;
+          height: 20vh;
+          width: 150px;
+        }
+      
+        @media (max-width: 600px) {
+          .box {
+            min-height: 40vh;
+            min-width: 90vw;
+          }
+        }
+      </style>  
 </head>
-<body>
-    <h1>Hora do Dia</h1>
-    <div class="box">
-       
-       <div id="div1" class="">
-        <h1>Horas</h1>
-       </div>
-       
+<body >
+    <h1 class="hora">Hora do Dia</h1>
+    
+    <div id="body" class="box">
         <div id="div2" class="div2">
-            <img class="image" src="https://wordpress-network.prod.aws.skyscnr.com/wp-content/uploads/2018/05/10-inspiring-places-watch-sunsets-around-world.jpg?w=482&h=283&crop=1" alt="">
+          <img class="image" src="https://wordpress-network.prod.aws.skyscnr.com/wp-content/uploads/2018/05/10-inspiring-places-watch-sunsets-around-world.jpg?w=482&h=283&crop=1" alt="">
         </div>
-    </div>
+      <br>
+        <div id="div1" class="div1">
+          <h3 class="teste1" id="Horas">Horas</h3>
+        </div>
+      </div>
     <h2>Curso em Video</h2>
-    <style>
+      <script>
+        
+        var HorasHtml = document.getElementById('Horas')
+        var hora = new Date()
+        var horaAgora = hora.getHours()
+        var MinutoAgora = hora.getMinutes()
+      
+        if (horaAgora > 12) {
+            HorasHtml.innerHTML = `Agora São ${horaAgora}:${MinutoAgora}`
+            var body = document.getElementById('body')
+            body.style.background = 'brown';
 
 
-
-    </style>
+        }
+      </script>
 </body>
 </html>
