@@ -1,20 +1,36 @@
+function Contar(){
 
+    var inicio = document.getElementById('inicio');
+    var fim = document.getElementById('Fim')
+    var pular = document.getElementById('Pular')
+    var res = document.getElementById('res');
 
-var fim = 20;
-var pular = 3;
+    if (inicio.value.lenght == 0 || fim.value.lenght == 0 || pular.value.lenght == 0) {
+        res.innerHTML = 'impossivel contar!'
+    }else{
 
-for (var inicio = 1; inicio <= fim; inicio += pular) {
-    console.log(`os números são ${inicio}`);
-    if (inicio + pular > fim) {
-        console.log('O número posterior excede o limite do número final');
-        break; 
-    }
-}
+        res.innerHTML = 'Contando: <br>'
+        var Ini = Number(inicio.value)
+        var fi = Number(fim.value)
+        var pass = Number(pular.value)
+        if (pass <= 0) {
+            alert('Passo invalido! Considerando Passo 1')
+            pass = 1
+        }
+        if (Ini < fi) {
+            //contangem cresente
+            for (let c = Ini; c <= fi; c+=pass) {
+                res.innerHTML += `${c} 👉`
+                
+            }
+        }else{
 
-for (inicio; inicio <= fim; inicio += pular) {
-    console.log(`os números são ${inicio}`);
-    if (inicio + pular > fim) {
-        console.log('O número posterior excede o limite do número final');
-        break;
+            //contagem regressiva
+            for (let c = Ini; c >= fi; c-=pass) {
+                res.innerHTML += `${c} 👈`
+                
+            }
+        }
+        res.innerHTML += '🏳️'
     }
 }

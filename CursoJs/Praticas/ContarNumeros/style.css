@@ -1,0 +1,27 @@
+
+    body{
+        background: cadetblue;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        
+    }
+    h1{
+
+        text-align: center;
+
+    }
+    .box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        background: white;
+        color: black;
+        width: 30vw;
+        height: 50vh;
+        border-radius: 10px;
+        margin: auto;
+        
+
+    }
