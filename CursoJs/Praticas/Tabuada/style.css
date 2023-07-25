@@ -1,0 +1,17 @@
+
+    body{
+        background: rgba(138, 138, 243, 0.308);
+    }
+
+    .box{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+        background-color: white;
+        flex-direction: column;
+        margin: auto;
+        width: 60vw;
+        height: 70vh;
+        border-radius: 10px;
+    }
