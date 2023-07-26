@@ -5,25 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analisar números</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="/Praticas/AnalisarNumeros/style.css">
 </head>
-<style>
-        body{
-        background: rgba(138, 138, 243, 0.308);
-    }
 
-    .box{
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        align-items: center;
-        background-color: white;
-        flex-direction: column;
-        margin: auto;
-        width: 60vw;
-        height: 70vh;
-        border-radius: 10px;
-    }
-</style>
 <body>
     <h1 style="text-align: center;">Analisador de números</h1>
     <div class="box">
@@ -34,34 +18,10 @@
         <select id="select" size="10">
             <option>Digite o Primeiro Número</option>
         </select>
-        <button type="button" class="btn btn-dark">Finalizar!</button>
+        <button type="button" class="btn btn-dark" onclick="finalizar()">Finalizar!</button>
         <div id="res"></div>
     </div>
     <h1 style="text-align: center;">CursoemVideo</h1>
-    <script>
-                var numeros = []
-        function Adicionar() {
-
-        var num = parseInt(document.getElementById('num').value)
-        var select = document.getElementById('select')
-        var res = document.getElementById('res')
-
-        if (isNaN(num)) {
-            alert('Digite um número')
-        }else if (num > 100) {
-            alert('O número deve ser menor que 100')
-            return;
-        }
-        numeros.push(num)
-        console.log(numeros)
-        var item = document.createElement('option')
-        item.text = numeros
-        select.appendChild(item)
-        res.innerHTML = ''
-        
-        } 
-        
-       
-    </script>
+<script src="/Praticas/AnalisarNumeros/script.js"></script>
 </body>
 </html>
