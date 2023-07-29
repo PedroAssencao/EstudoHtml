@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Gerar Números</title>
+</head>
+<style>
+    body{
+        color: white;
+        
+    }
+    #box{
+        background-color: black;
+        margin: 15vh auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60vh;
+        width: 60vw;
+        flex-direction: column;
+        gap: 10px;
+    }
+</style>
+<body>
+    <div id="box">
+        <h1>Gerar Números</h1>
+        <div class="buttons">
+            <button type="button" class="btn btn-dark" onclick="gerar()">Gerar</button>
+            <button type="button" class="btn btn-dark" onclick="limpar()">Limpar</button>
+        </div>
+        <div id="res" style="overflow: scroll"><h2></h2></div>
+    </div>
+
+   <script>
+        var res = document.getElementById('res')
+
+        function gerar(){       
+            var min = 1
+            var max = 100
+            var dif = max- min
+            var sort = Math.random()
+            var num = min + Math.trunc(dif * sort)
+            res.innerHTML += `<h2>Ó número sorteado foi <strong>${num}</strong>!</h2>`
+        }
+        function limpar(){
+            res.innerHTML = ''
+        }
+        
+
+   </script>
+
+</body>
+</html>
