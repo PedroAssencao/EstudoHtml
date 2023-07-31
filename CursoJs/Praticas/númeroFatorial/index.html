@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fatorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        .box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: wheat;
+            margin: auto;
+            height: 60vh;
+            width: 40vw;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">fatorial</h1>
+    <div class="box">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Recipient's username" id="n" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="Calcular()">Calcular</button>
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Recipient's username" id="n2" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="Calcular()">Calcular</button>
+        </div>
+        <var id="res1"></var>
+    </div>
+    <script>
+
+        function Calcular() {
+            var n = document.getElementById('n').value
+            var res1 = document.getElementById('res1')
+            var res = 1
+            for (let index = 1; index <= n; index++) {
+                res *= index
+            }
+            res1.innerHTML = `O fatorial do número ${n} é igual a ${res}`
+        }
+    </script>
+</body>
+</html>
