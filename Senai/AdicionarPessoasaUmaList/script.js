@@ -1,9 +1,12 @@
+
 var NomeAdicionados = []
+
 function Adicionar(){
 
     var nome = document.getElementById('Nome').value
     var sobrenome = document.getElementById('Sobrenome').value
     var list = document.getElementById('list')
+
     if (nome == '' || sobrenome == '') {
        alert('Preencha os Dois campos Corretamente')
        return
