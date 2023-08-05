@@ -5,111 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-</head>
-<style>
-
-    body{
-        background-color: gray;
-        overflow-y: hidden;
-    }
-
-    .box{
-        display: flex;
-        width: 40vw;
-        height: 60vh;
-        margin: 40vh auto;
-        background-color: rgba(0, 0, 0, 0.534);
-        border-radius: 10px;
-        flex-direction: column;
-    }
-
-    .buttons{
-        display: flex;
-    }
-    #resultado {
-        font-size: 20pt;
-        color: white;
-        background: black;
-        height: 80px;
-    }
-</style>
+    <link rel="stylesheet" href="/Senai/calculadora/style.css">
+  </head>
 <body>
-    <div class="box">
-        <div class="input-group mb-3">
-            <input type="text" class="form-control" id="resultado" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-          </div>
-            <div class="buttons">
 
-                <div class="container text-center">
-                    <div class="row">
-                      <div class="col" style="display: flex; max-height: 40px; width: 90px;">
-                        <button onclick="numero(1)" class="btn btn-light">1</button>
-                        <button onclick="numero(2)" class="btn btn-light">2</button>
-                        <button onclick="numero(3)" class="btn btn-light">3</button>
-                        <button onclick="numero(4)" class="btn btn-light">4</button>
-                      </div>
-                      <div class="col" style="display: flex; max-height: 40px; width: 90px; gap: 10px;">
-                        <button onclick="numero(5)" class="btn btn-light">5</button>
-                        <button onclick="numero(6)" class="btn btn-light">6</button>
-                        <button onclick="numero(7)" class="btn btn-light">7</button>
-                      </div>
-                      <div class="col" style="display: flex; max-height: 40px; width: 90px; gap: 10px;">
-                        <button onclick="numero(8)" class="btn btn-light">8</button>
-                        <button onclick="numero(9)" class="btn btn-light">9</button>
-                        <button onclick="numero(0)" class="btn btn-light">0</button>
-                      </div>
-                      <div class="col">
-                        <button onclick="numero('+')" class="btn btn-light">+</button>
-                        <button onclick="numero('-')" class="btn btn-light">-</button>
-                        <button onclick="numero('*')" class="btn btn-light">*</button>
-                        <button onclick="numero('/')" class="btn btn-light">/</button>
-                        <button onclick="clean()" class="btn btn-light">C</button>
-                        <button onclick="backspace()" class="btn btn-light">aaa</button>
-                        <button onclick="calc()" class="btn btn-light">=</button>
-                      </div>
-                    </div>
-            </div>
-    </div>    
+    <div class="container">
+      <div class="calculator">
+        <div class="calculator__display" id="display" style="min-height: 120px;"></div>
+        <div class="calculator__keys">
+          <button class="key--operator" onclick="numero('+')">+</button>
+          <button class="key--operator" onclick="numero('-')">-</button>
+          <button class="key--operator" onclick="numero('*')">&times;</button>
+          <button class="key--operator" onclick="numero('/')">÷</button>
+          <button onclick="numero(7)">7</button>
+          <button onclick="numero(8)">8</button>
+          <button onclick="numero(9)">9</button>
+          <button class="key--operator" onclick="backspace()"><</button>
+          <button onclick="numero(4)">4</button>
+          <button onclick="numero(5)">5</button>
+          <button onclick="numero(6)">6</button>
+          <button onclick="numero(1)">1</button>
+          <button onclick="numero(2)">2</button>
+          <button onclick="numero(3)">3</button>
+          <button onclick="numero(0)">0</button>
+          <button data-action="decimal" onclick="numero('.')">.</button>
+          <button data-action="clear" onclick="clean()">AC</button>
+          <button class="key--equal" data-action="calculate" onclick="calc()">=</button>
+        </div>
+      </div>
+    </div>
+
 </body>
 </html>
 
 <script>
 
-    var resultado = document.getElementById('resultado');
+  var resultado = document.getElementById('display');
+  
 
-    function numero(params) {
-    var digitios = resultado[resultado.length -1]
-    if (Sinal(digitios) && Sinal(params)) {
-        if (resultado.value.length > 0) {
-        resultado.value = resultado.value.slice(0, -1);
+  function Sinal(char) {
+      return ['+', '-', '/', '*'].includes(char);
+  }
+
+  function numero(params) {
+      var digitos = resultado.innerHTML;
+      var ultimoCaractere = digitos[digitos.length - 1];
+
+      if (Sinal(ultimoCaractere) && Sinal(params)) {
+          resultado.innerHTML = digitos.slice(0, -1) + params;
+      } else {
+          resultado.innerHTML += params;
       }
-    }else{
-        resultado.value += params
-    }
-    }
 
-    function calc() {
-    var calcular = eval(resultado.value);
-    resultado.value = calcular;
+  }
 
-    if (resultado.value.length > 0) {
-        var a = Number(resultado.value)  + Number(resultado.value)
-        console.log(a)
-    }
-    }
+  function calc() {
+      resultado.innerHTML = eval(resultado.innerHTML);
+  }
 
-    function clean() {
-        resultado.value = ''
-    }
+  function clean() {
+      resultado.innerHTML = '';
+  }
 
-    function backspace() {
-      if (resultado.value.length > 0) {
-        resultado.value = resultado.value.slice(0, -1);
-      }
-    }
-
-    function Sinal(params) {
-        return ['+', '-', '/', '*'].includes(params)
-    }
+  function backspace() {
+      resultado.innerHTML = resultado.innerHTML.slice(0, -1);
+  }
 
 </script>
