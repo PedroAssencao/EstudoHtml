@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/CursoVue/instalação_01/src/script.js" defer></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <form id="app-form">
+            <input type="text" v-model="input_name">
+            <input type="text" v-model="input_idade">
+            <input type="submit" V-on:click="submitForm">
+        </form>
+
+        <p>Sem dataBinding: O meu nome é {{name}}, é tenho {{idade}} de idade</p>
+        <p>com dataBinding: O meu nome é {{input_name}}, é tenho {{input_idade}} de idade</p>
+    </div>
+</body>
+</html>
