@@ -5,6 +5,66 @@
       return ['+', '-', '/', '*'].includes(char);
   }
 
+
+  document.addEventListener("keydown", function(event) {
+    // Verifica se a tecla pressionada é um número (0-9)
+    numeroAnteriors = event.key
+
+    console.log(numeroAnteriors)
+
+    if (event.key >= "0" && event.key <= "9") {
+      // Obtém o número da tecla pressionada
+      var numero = event.key;
+      // Adiciona o número à div de saída
+      resultado.innerHTML += numero;
+     
+       
+    }
+
+    if(numeroAnteriors == '+' && resultado.innerHTML == '' || numeroAnteriors == '-' && resultado.innerHTML == '' || numeroAnteriors == '/' && resultado.innerHTML == '' || numeroAnteriors == '*' && resultado.innerHTML == ''){
+        return
+    }
+
+    if (event.key == "+" || event.key == "-" || event.key == "*"  || event.key == "/" ) {
+    
+        var digitos = resultado.innerHTML;
+        var ultimoCaractere = digitos[digitos.length - 1];
+        var params = event.key
+        console.log(params)
+        
+        if (Sinal(ultimoCaractere) && Sinal(params)) {
+            resultado.innerHTML = digitos.slice(0, -1) + params;
+            return
+        } else {
+            resultado.innerHTML += params;
+        }
+
+        
+        // Obtém o número da tecla pressionada
+        var numero = event.key;
+       
+        // Adiciona o número à div de saída
+        resultado.innerHTML += numero;
+
+      
+      }
+
+      if (event.key == '=' || event.key === "Enter") {
+
+        var numero = event.key;
+ 
+        calc();
+      }
+
+      if (event.key === "Backspace") {
+        backspace()
+      }
+      var resultadotrue = document.getElementById('resultadotrue')
+      var resultado1 = document.getElementById('display')
+      resultadotrue.value = resultado1.innerHTML
+  });
+
+
   function numero(params) {
 
       var digitos = resultado.innerHTML;
@@ -25,6 +85,10 @@
         resultado.innerHTML = '';
       }
 
+
+      var resultadotrue = document.getElementById('resultadotrue')
+      var resultado1 = document.getElementById('display')
+      resultadotrue.value = resultado1.innerHTML
   }
 
   var storedNumberAfterSymbol = null;
