@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+    <h1 style="text-align: center; margin: 1vh auto;">Sorveteiria</h1>
+    <div id="conteiner">
+        <div id="Primeira">
+            <h3>Escolha os Sabores</h3>
+            <select id="PrimeiroSelect" class="form-select" multiple aria-label="Multiple select example" size="2" style="height: 200px; text-align: center; margin: 10px auto;">
+                <option value="3">Chocolate</option>
+                <option value="4">Flocos</option>
+                <option value="5">Morango</option>
+            </select>
+        </div>
+
+        <div id="buttons">
+            <button type="button" class="btn btn-dark" onclick="Enviar()">>></button>
+            <button type="button" class="btn btn-dark" onclick="voltar()"><<</button>
+
+            <div id="res">
+                Valor: $0.00
+            </div>
+        </div>
+
+        <div id="segunda">
+            <h3>Sabores Escolhidos</h3>
+            <select id="SegundoSelect" class="form-select" multiple aria-label="Multiple select example" size="2" style="height: 200px; text-align: center; margin: 10px auto;">
+            
+            </select>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
