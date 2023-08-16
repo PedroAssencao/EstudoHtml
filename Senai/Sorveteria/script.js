@@ -17,6 +17,7 @@ var res2 = document.getElementById('res2')
         if (selectedOption) {
             select2.appendChild(selectedOption);
             calcularSoma();
+            res2.innerHTML = 'Valor: $0.00'
         }
 
     }
