@@ -2,6 +2,13 @@
 var select = document.getElementById('PrimeiroSelect')
 var select2 = document.getElementById('SegundoSelect')
 var res = document.getElementById('res')
+var res2 = document.getElementById('res2')
+
+
+    select.addEventListener('change', function(){
+        var preco = parseFloat(select.value)
+        res2.innerHTML = `Valor: $${preco.toFixed(2)}`
+    })
 
     function Enviar() {
 
@@ -32,7 +39,7 @@ var res = document.getElementById('res')
     for (var i = 0; i < select2.options.length; i++) {
         total += parseInt(select2.options[i].value);
     }
-    res.innerHTML = `Valor: $${total.toFixed(2)}`
+    res.innerHTML = `Valor Total: $${total.toFixed(2)}`
 
     }
 
