@@ -1,10 +1,12 @@
 .body{
     background-image: url('https://cdn.pixabay.com/photo/2016/12/29/18/44/background-1939128_1280.jpg');
+    overflow: hidden;
 }
 
 .text{
     text-align: center;
     margin-top: 20vh;
+    color: white;
 }
 
 .options{
@@ -25,4 +27,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }

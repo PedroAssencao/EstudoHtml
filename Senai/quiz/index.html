@@ -6,33 +6,174 @@
     <title>Document</title>
     <link rel="stylesheet" href="/quiz/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body class="body">
 
-    <div class="text" style="color: white;">
-
-        <h2>adka´[po]s~kaos</h2>
+    <div class="text" id="text">
+        <h2>adka[po]s~kaos</h2>
     </div>
 
-    <div class="options">
-        <div class="escolhas">
-            <h3>dadasda</h3>
+    <div class="options" id="Primeira">
+
+            <div class="escolhas" onclick="Pergunta1(1)">
+                <h3>dadasda</h3>
+            </div>
+    
+            <div class="escolhas" onclick="Pergunta1(0)">
+                <h3>dasdadasd</h3>
+            </div>
+    
+            <div class="escolhas" onclick="Pergunta1(0)">
+                <h3>asdsdada</h3>
+            </div>
+    
+            <div class="escolhas" onclick="Pergunta1(0)">
+                <h3>adasdadsad</h3>
+            </div>
+    </div>
+
+    <div class="options" id="Segunda" style="display: none;">
+        <div style="display: flex; justify-content: center; align-items: center;">
+            
+            <div class="escolhas" onclick="Pergunta2(0)">
+                <h3>Miguel</h3>
+            </div>
+
+            <div class="escolhas" onclick="Pergunta2(0)">
+                <h3>é</h3>
+            </div>
+
+            <div class="escolhas" onclick="Pergunta2(0)">
+                <h3>Viado</h3>
+            </div>
+
+            <div class="escolhas" onclick="Pergunta2(1)">
+                <h3>👌</h3>
+            </div>
+        </div>
+</div>
+
+<div class="options" id="Tereceira" style="display: none;">
+    <div style="display: flex; justify-content: center; align-items: center;">
+        
+        <div class="escolhas" onclick="Pergunta3(0)">
+            <h3>Voce</h3>
         </div>
 
-        <div class="escolhas">
-            <h3>dasdadasd</h3>
+        <div class="escolhas" onclick="Pergunta3(0)">
+            <h3>é</h3>
         </div>
 
-        <div class="escolhas">
-            <h3>asdsdada</h3>
+        <div class="escolhas" onclick="Pergunta3(0)">
+            <h3>Broxa</h3>
         </div>
 
-        <div class="escolhas">
-            <h3>adasdadsad</h3>
+        <div class="escolhas" onclick="Pergunta3(1)">
+            <h3>🍆</h3>
         </div>
     </div>
+</div>
+
+<div class="options" id="Quarto" style="display: none;">
+    <div style="display: flex; justify-content: center; align-items: center;">
+        
+        <div class="escolhas" onclick="Pergunta4(0)">
+            <h3>Mario</h3>
+        </div>
+
+        <div class="escolhas" onclick="Pergunta4(0)">
+            <h3>é</h3>
+        </div>
+
+        <div class="escolhas" onclick="Pergunta4(1)">
+            <h3>Baitola</h3>
+        </div>
+
+        <div class="escolhas" onclick="Pergunta4(0)">
+            <h3>🐒</h3>
+        </div>
+    </div>
+</div>
+
+<div id="res" style="display: none; text-align: center; color: white;">
+    <h1>Parabens seu resultaod é </h1>
+</div>
+
+    <script>
+
+        var contador = 0
+        var Primeira = document.getElementById('Primeira')
+        var Segunda = document.getElementById('Segunda')
+        var Tereceira = document.getElementById('Tereceira')
+        var Quarto = document.getElementById('Quarto')
+        var res = document.getElementById('res')
+        var text = document.getElementById('text')
+        function Pergunta1(params) {
+            if (params == 1) {
+                alert('Resposta Correta!')
+                contador++
+                Primeira.style.display = 'none'
+                Segunda.style.display = 'block'
+                text.innerHTML = `<h2>Mico leão Pintudo</h2>`
+            }else{
+                alert('Resposta Errada!')
+                Primeira.style.display = 'none'
+                Segunda.style.display = 'block'
+                text.innerHTML = `<h2>Mico leão Pintudo</h2>`
+            }
+        }
+
+        function Pergunta2(params) {
+            if (params == 1) {
+                alert('Resposta Correta!')
+                contador++
+                Segunda.style.display = 'none'
+                Tereceira.style.display = 'block'
+                text.innerHTML = `<h2>Mico leão tetudo</h2>`
+
+            }else{
+                alert('Resposta Errada!')
+                Segunda.style.display = 'none'
+                Tereceira.style.display = 'block'
+                text.innerHTML = `<h2>Mico leão tetudo</h2>`
+            }
+        }
+
+        function Pergunta3(params) {
+            if (params == 1) {
+                alert('Resposta Correta!')
+                contador++
+                Tereceira.style.display = 'none'
+                Quarto.style.display = 'block'
+                text.innerHTML = `<h2>Mico leão bombastico</h2>`
+
+            }else{
+                alert('Resposta Errada!')
+                Tereceira.style.display = 'none'
+                Quarto.style.display = 'block'
+                text.innerHTML = `<h2>Mico leão bombastico</h2>`
+            }
+        }
+
+        function Pergunta4(params) {
+            if (params == 1) {
+                alert('Resposta Correta!')
+                contador++
+                Quarto.style.display = 'none'
+                res.style.display = 'block'
+                res.innerHTML = `<h1>Sua Quantidade de Acertos é ${contador}/4</h1>`
+                text.innerHTML = ''
+
+            }else{
+                alert('Resposta Errada!')
+                res.innerHTML = `<h1>Sua Quantidade de Acertos é ${contador}/4</h1>`
+                Quarto.style.display = 'none'
+                res.style.display = 'block'
+                text.innerHTML = ''
+            }
+        }
+
+
+    </script>
 </body>
 </html>
