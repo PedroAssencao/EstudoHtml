@@ -1,6 +1,6 @@
 .body{
     background-image: url('https://cdn.pixabay.com/photo/2016/12/29/18/44/background-1939128_1280.jpg');
-    overflow: hidden;
+    
 }
 
 .text{
@@ -16,6 +16,8 @@
     gap: 10px;
     margin-top: 40px;
 }
+
+
 .escolhas{
     width: 400px;
     height: 400px;
@@ -29,3 +31,24 @@
     align-items: center;
     cursor: pointer;
 }
+
+
+
+
+
+@media (max-width: 600px) {
+    .options{
+        flex-direction: column;
+    }
+    .escolhas{
+        width: 300px;
+        height: 200px;
+ 
+    }
+
+    .aa{
+    flex-direction: column;
+    }
+
+  }
+  
