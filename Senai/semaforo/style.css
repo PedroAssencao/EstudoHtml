@@ -1,0 +1,45 @@
+
+    body{
+        background: gray;
+    }
+
+    #conteiner{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background: black;
+        width: 350px;
+        height: 700px;
+        margin: 10vh auto;
+        border-radius: 10px;
+        gap: 10px;
+    }
+
+    #vermelho{
+        background: #5c0211;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+    #Amarelo{
+        background: #948801;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+    #Verde{
+        background: #1b8003;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+
+    }
+
+    .buttons{
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
