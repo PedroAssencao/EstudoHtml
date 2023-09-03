@@ -3,10 +3,9 @@
         <p v-if="estou_trabalhando">estou Trabalhando no momento.</p>
         <p v-else>Não estou trabalhando no Momento.</p>
         <p>Ultilizo as seguintes tecnologias</p>
-        <ul>
-            <li>JavaScript</li>
-            <li>Html</li>
-            <li>css</li>
+        <ul v-for="tecnologias in backend_technolgy">
+            <li>{{tecnologias}}</li>
+            <li>Algo a mais</li>
         </ul>
         <div>
             <button @click="mostrarr_Email">{{textoBotao}}</button>
@@ -31,7 +30,8 @@
                 mostrar_Email: false,
                 email: 'PedroMarcelo31102006@gmail.com',
                 meu_link: 'https:/google.com',
-                textoBotao: 'Mostrar Email'
+                textoBotao: 'Mostrar Email',
+                backend_technolgy: ['javascript', 'PHP', 'Python']
             }
         },
         methods: {
