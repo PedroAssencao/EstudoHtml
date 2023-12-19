@@ -1,0 +1,14 @@
+@media (max-width: 768px) {
+    #buttons {
+      flex-direction: column;
+    }
+
+    #ExibirU {
+        flex-direction: column;
+    }
+
+    #BtnEncontrar {
+        height: 70px;
+    }
+
+  }
