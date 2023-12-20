@@ -1,185 +1,458 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SmartFit</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="icon" href="/Desafios/DesafiosSmartFit/images/logo.svg" type="image/x-icon">
-    <link rel="stylesheet" href="/Desafios/DesafiosSmartFit/style/style.css">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SmartFit</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="icon" href="/images/logo.svg" type="image/x-icon">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="/style/style.css">
 </head>
-  <body>
-    
-    <!-- header da pagina - start -->
 
-    <header>
-        <nav class="navbar" style="background: black;">
-            <div class="container-fluid d-flex justify-content-center align-items-center">
-                <a class="navbar-brand text-center" href="#">
-                    <img src="/Desafios/DesafiosSmartFit/images/logo.svg" alt="Logo" width="100" height="100" class="d-inline-block align-text-top">
-                </a>
-            </div>
-        </nav>
-    </header>
+<body>
 
-    <!-- header da pagina - end -->
+  <!-- header da pagina - start -->
+
+  <header>
+    <nav class="navbar" style="background: black;">
+      <div class="container-fluid d-flex justify-content-center align-items-center">
+        <a class="navbar-brand text-center" href="#">
+          <img src="/images/logo.svg" alt="Logo" width="100" height="100" class="d-inline-block align-text-top">
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- header da pagina - end -->
 
 
-    <!-- informações de reabertura - start -->
-    <div class="container-sm mt-5">
-        <div class="row">
-            <div class="col-12">
-                <h1 style="font-size: 32pt;">REABERTURA</h1>
-                <h1 style="font-size: 32pt;" class="mb-3">SMART FIT</h1>
-            </div>
-            <div class="col-12">
-                <div class="bg-black"style="width: 90px; height: 10px;"></div>
-            </div>
-            <div class="col-12 col-sm-12 mt-4">
-                <div>
-                    <p>O horário de funcionamento das nossas unidades está seguindo os decretos de cada município. Por isso, confira aqui se a sua unidade está aberta e as medidas de segurança que estamos seguindo.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- informações de reabertura - end -->
+  <!-- informações de reabertura - start -->
 
-    <!-- filtros - start -->
-    <div class="container mt-4 rounded" style="height: auto; width: 96%; box-shadow: #808080 0px 3px 8px; padding: 30px;">
-        <div>
-            <figure>
-                <img src="/Desafios/DesafiosSmartFit/images/icon-hour.png" height="30" width="30" style="float: left; margin-right: 10px;">
-                <figcaption>horário</figcaption>
-            </figure>
-        </div>
-     
-        
-        <table class="table" style="color: #808080;">
-            <thead>
-              <tr>
-                <th scope="col"><h3>Qual período quer treinar?</h3></th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                          Manhã
-                        </label>
-                      </div>
-                </th>
-                <td></td>
-         
-                <td>6:00 às 18:00</td>
-              </tr>
-              <tr>
-                <th scope="row">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                          Tarde
-                        </label>
-                      </div>
-                </th>
-             
-                <td></td>
-                <td>12:01 às 18:00</td>
-              </tr>
-              <tr>
-                <th scope="row">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                          Noite
-                        </label>
-                      </div>
-                </th>
-                <td colspan="1"></td>
-                <td>18:01 às 23:00</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <div id="ExibirU" class="mt-5 d-flex justify-content-between gap-2">
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
-                <label class="form-check-label" for="flexCheckIndeterminate">
-                  Exibir unidades fechadas checkbox
-                </label>
-              </div>
-              <p>Resultados encontrados: 0</p>
-            </div>
-
-        <div id="buttons" class="btn gap-2 d-flex justify-content-center">
-            <button type="button" class="text-uppercase btn btn-warning btn-lg text-center" id="BtnEncontrar" style="width: 35vh; height: 50px;">Encontrar Unidade</button>
-            <button type="button" class="text-uppercase btn btn-light btn-lg text-center" style="width: 35vh;">Limpar</button>
-        </div>
-
-    </div>
-
-    <!-- filtros - end style="background-color: #808080;" -->
-<div class="container mt-5 rounded" style="padding: 20px; height: 20vh; background: #f5f5f5;">
+  <div class="container-sm mt-5">
     <div class="row">
-    <div class="container d-flex justify-content-center align-content-center align-items-center">
+      <div class="col-12">
+        <h1 style="font-size: 32pt;">REABERTURA</h1>
+        <h1 style="font-size: 32pt;" class="mb-3">SMART FIT</h1>
+      </div>
+      <div class="col-12">
+        <div class="bg-black" style="width: 90px; height: 10px;"></div>
+      </div>
+      <div class="col-12 col-sm-12 mt-4">
+        <div>
+          <p>O horário de funcionamento das nossas unidades está seguindo os decretos de cada município. Por isso,
+            confira aqui se a sua unidade está aberta e as medidas de segurança que estamos seguindo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- informações de reabertura - end -->
+
+  <!-- filtros - start -->
+
+  <div class="container mt-4 rounded" style="height: auto; width: 96%; box-shadow: #808080 0px 3px 8px; padding: 30px;">
+    <div>
+      <figure>
+        <img src="/images/icon-hour.png" height="30" width="30" style="float: left; margin-right: 10px;">
+        <figcaption>horário</figcaption>
+      </figure>
+    </div>
+
+
+    <table class="table" style="color: #808080;">
+      <thead>
+        <tr>
+          <th scope="col">
+            <h3>Qual período quer treinar?</h3>
+          </th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                Manhã
+              </label>
+            </div>
+          </th>
+          <td></td>
+
+          <td>6:00 às 18:00</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                Tarde
+              </label>
+            </div>
+          </th>
+
+          <td></td>
+          <td>12:01 às 18:00</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                Noite
+              </label>
+            </div>
+          </th>
+          <td colspan="1"></td>
+          <td>18:01 às 23:00</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div id="ExibirU" class="mt-5 d-flex justify-content-between gap-2">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+        <h5 class="form-check-label" for="flexCheckIndeterminate">
+          Exibir unidades fechadas
+          </label>
+      </div>
+      <h5 class="text-center">Resultados encontrados: 0</p>
+    </div>
+
+    <div id="buttons" class="btn gap-2 d-flex justify-content-center align-items-center">
+      <button type="button" class="text-uppercase btn btn-warning btn-lg text-center" style="width: 35vh;"
+        id="btnEncontrar">Encontrar Unidade</button>
+      <button type="button" class="text-uppercase btn btn-light btn-lg text-center" style="width: 35vh;">Limpar</button>
+    </div>
+
+  </div>
+
+  <!-- filtros - end -->
+
+  <!--Infos - start -->
+
+  <div class="container mt-5 rounded p-5" style="width: 96%; height: auto; background: #f5f5f5;">
+    <div class="row">
+      <div id="infos" class="container d-flex justify-content-center align-content-center align-items-center">
+
+        <div class="col-3 justify-content-center">
+          <h4 class="text-center">Máscara</h4>
+          <div class="d-flex justify-content-center  align-items-center gap-2 mt-4">
+            <figure class="figure">
+              <img src="/images/required-mask.png" class="figure-img img-fluid rounded" width="100" height="100"
+                alt="A generic square placeholder image with rounded corners in a figure.">
+              <figcaption class="figure-caption text-center" style="font-size: 18pt;">Obrigatorio</figcaption>
+            </figure>
+            <figure class="figure">
+              <img src="/images/recommended-mask.png" class="figure-img img-fluid rounded" width="100" height="100"
+                alt="A generic square placeholder image with rounded corners in a figure.">
+              <figcaption class="figure-caption text-center" style="font-size: 18pt;">Recomendado</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="col-3 justify-content-center">
+          <h4 class="text-center">Toalha</h3>
+            <div class="d-flex justify-content-center align-items-center gap-2 mt-4">
+              <figure class="figure">
+                <img src="/images/required-towel.png" class="figure-img img-fluid rounded" width="100" height="100"
+                  alt="A generic square placeholder image with rounded corners in a figure.">
+                <figcaption class="figure-caption text-center" style="font-size: 18pt;">Obrigatorio</figcaption>
+              </figure>
+              <figure class="figure">
+                <img src="/images/recommended-towel.png" class="figure-img img-fluid rounded" width="100" height="100"
+                  alt="A generic square placeholder image with rounded corners in a figure.">
+                <figcaption class="figure-caption text-center" style="font-size: 18pt;">Recomendado</figcaption>
+              </figure>
+            </div>
+        </div>
+        <div class="col justify-content-center">
+          <h4 class="text-center">Bebedouro</h3>
+            <div class="d-flex justify-content-center align-items-center gap-2 mt-4">
+              <figure class="figure">
+                <img src="/images/partial-fountain.png" class="figure-img img-fluid rounded" width="100" height="100"
+                  alt="A generic square placeholder image with rounded corners in a figure.">
+                <figcaption class="figure-caption text-center" style="font-size: 18pt;">Parcial</figcaption>
+              </figure>
+              <figure class="figure">
+                <img src="/images/forbidden-fountain.png" class="figure-img img-fluid rounded" width="100" height="100"
+                  alt="A generic square placeholder image with rounded corners in a figure.">
+                <figcaption class="figure-caption text-center" style="font-size: 18pt;">Proibido</figcaption>
+              </figure>
+            </div>
+        </div>
+        <div class="col justify-content-center">
+          <h4 class="text-center">Vestiário</h3>
+            <div class="d-flex justify-content-center align-items-center gap-2 mt-4">
+              <figure class="figure">
+                <img src="/images/required-lockerroom.png" class="figure-img img-fluid rounded"
+                  style="min-width: 100px;" width="100" height="100"
+                  alt="A generic square placeholder image with rounded corners in a figure.">
+                <figcaption class="figure-caption text-center" style="font-size: 18pt;">Liberado</figcaption>
+              </figure>
+              <figure class="figure">
+                <img src="/images/partial-lockerroom.png" class="figure-img img-fluid rounded" style="min-width: 100px;"
+                  width="100" height="100" alt="A generic square placeholder image with rounded corners in a figure.">
+                <figcaption class="figure-caption text-center" style="font-size: 18pt;">Parcial</figcaption>
+              </figure>
+              <figure class="figure">
+                <img src="/images/forbidden-lockerroom.png" class="figure-img img-fluid rounded"
+                  style="min-width: 100px;" width="100" height="100"
+                  alt="A generic square placeholder image with rounded corners in a figure.">
+                <figcaption class="figure-caption text-center" style="font-size: 18pt;">Fechado</figcaption>
+              </figure>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Infos - end -->
+
+  <!--Resultados Start -->
+  <div class="container mt-5">
+    <div class="row g-4" id="results">
+      <!-- Adicione mais col-md-4 conforme necessário para cada coluna -->
+    </div>
+  </div>
+  
+
+  
+  
+  
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
+<script>
+  $.get("https://test-frontend-developer.s3.amazonaws.com/data/locations.json", function (success) {
+    var results = document.getElementById('results')
+   
+    success.locations.forEach((element, index) => {
+      console.log(element)
+      
+      
+
+      if (element.mask == "required") {
+        var maskR = "block"
+        var maskL = "none"
+      }else{
+        var maskR = "none"
+        var maskL = "block"
+      }
+
+  
+      if (element.towel == "required") {
+        var towelR = "block"
+        var towelL = "none"
+      }else{
+        var towelR = "none"
+        var towelL = "block"
+      }
+
+      
+      if (element.fountain == "required") {
+        var fountainR = "block"
+        var fountainL = "none"
+      }else{
+        var fountainR = "none"
+        var fountainL = "block"
+      }
+
+      if (element.locker_room == "closed") {
+        var locker_roomR = "block"
+        var locker_roomL = "none"
+        var locker_roomP = "none"
+      }else if (element.locker_room == "allowed"){
+        var locker_roomR = "none"
+        var locker_roomL = "block"
+        var locker_roomP = "none"
+      }else{
+        var locker_roomR = "none"
+        var locker_roomL = "none"
+        var locker_roomP = "block"
+      }
+
+   
+
+      if (element.opened == true) {
+        var col = `
+      
+      <div class="col-md-4">
+        <div class="container rounded p-3" style="min-height: 70vh; background: #f5f5f5;">
+          <div>
+            <h5 class="text-success">Aberto</h5>
+            <h3>${element.title}</h3>
+            ${element.content}
+          </div>
           
-            <div class="col-3">
-                <img width="100" height="100" src="/Desafios/DesafiosSmartFit/images/required-mask.png">
-                <label>Obrigatorio</label>
-                <img width="100" height="100" src="/Desafios/DesafiosSmartFit/images/recommended-mask.png">
-                <label>Recomendado</label>
-            </div>
-            <div class="col-3">
-              <img width="100" height="100" src="/Desafios/DesafiosSmartFit/images/required-towel.png">
-              <img width="100" height="100" src="/Desafios/DesafiosSmartFit/images/recommended-towel.png">
-            </div>
-            <div class="col-3">
-              <img width="100" height="100" src="/Desafios/DesafiosSmartFit/images/partial-fountain.png">
-              <img width="100" height="100" src="/Desafios/DesafiosSmartFit/images/forbidden-fountain.png">
-            </div>
-            <div class="col-3">
-              <img width="100" height="100" src="/Desafios/DesafiosSmartFit/images/forbidden-lockerroom.png">
-              <img width="100" height="100" src="/Desafios/DesafiosSmartFit/images/partial-lockerroom.png">
-              <img width="100" height="100" src="/Desafios/DesafiosSmartFit/images/required-lockerroom.png">
+          <hr>
+  
+          <div class="container d-flex justify-content-center align-items-center">
+            <img src="/images/required-mask.png" style='display: ${maskR}' class="figure-img img-fluid rounded max-width-100" alt="A generic square placeholder image with rounded corners in a figure.">
+            <img src="/images/recommended-mask.png" style='display: ${maskL}' class="figure-img img-fluid rounded max-width-100" alt="A generic square placeholder image with rounded corners in a figure.">
+            <img src="/images/required-towel.png" style='display: ${towelR}' class="figure-img img-fluid rounded max-width-100" alt="A generic square placeholder image with rounded corners in a figure.">
+            <img src="/images/recommended-towel.png" style='display: ${towelL}' class="figure-img img-fluid rounded max-width-100" alt="A generic square placeholder image with rounded corners in a figure.">
+            <img src="/images/partial-fountain.png" style='display: ${fountainR}' class="figure-img img-fluid rounded max-width-100" alt="A generic square placeholder image with rounded corners in a figure.">
+            <img src="/images/forbidden-fountain.png" style='display: ${fountainL}' class="figure-img img-fluid rounded max-width-100" alt="A generic square placeholder image with rounded corners in a figure.">
+            <img src="/images/required-lockerroom.png" style='display: ${locker_roomR}' class="figure-img img-fluid rounded max-width-100" alt="A generic square placeholder image with rounded corners in a figure.">
+            <img src="/images/partial-lockerroom.png" style='display: ${locker_roomL}' class="figure-img img-fluid rounded max-width-100" alt="A generic square placeholder image with rounded corners in a figure.">
+            <img src="/images/forbidden-lockerroom.png" style='display: ${locker_roomP}' class="figure-img img-fluid rounded max-width-100" alt="A generic square placeholder image with rounded corners in a figure.">
+
+          </div>
+
+          <div>
+            
+            <div class="container text-center">
+              <div class="row row-cols-2">
+                <div id='col${index + 1}' class="col">
+                  <blockquote class="blockquote">
+                    <p class="mb-0" id='col${index+ 1}-dia'>Seg. a Sex.</p>
+                    <footer class="" id='${index+ 1}-hora'>06h as 22h</footer>
+                  </blockquote>
+                </div>
+                <div id=col${index+ 2} class="col">
+                  <blockquote class="blockquote">
+                    <p class="mb-0" id='col${index+ 2}-dia'>Seg. a Sex.</p>
+                    <footer class="" id='col${index+ 2}-hora'>06h as 22h</footer>
+                  </blockquote>
+                </div>
+                <div id='col${index+ 3}' class="col">
+                  <blockquote class="blockquote">
+                    <p class="mb-0" id='col${index+ 3}-dia'>Seg. a Sex.</p>
+                    <footer class="" id='col${index+ 3}-hora'>06h as 22h</footer>
+                  </blockquote>
+                </div>
+                <div id='col${index+ 4}' class="col">
+                  <blockquote class="blockquote">
+                    <p class="mb-0" id='col${index+ 4}-dia'>Seg. a Sex.</p>
+                    <footer class="" id='col${index+ 4}-hora'>06h as 22h</footer>
+                  </blockquote>
+                </div>
+                <div id='col${index+ 5}' class="col">
+                  <blockquote class="blockquote">
+                    <p class="mb-0" id='col${index+ 5}-dia'>Seg. a Sex.</p>
+                    <footer class="" id='col${index+ 5}-hora'>06h as 22h</footer>
+                  </blockquote>
+                </div>
+              </div>
             </div>
           </div>
-    </div>
-  </div>
-  <div class="container mt-5 rounded" style="padding: 20px;">
-    <div class="row">
-  <div class="col-3 p-5 mt-5 rounded" style="background: #f5f5f5; width: 17vw;">
-    <h4 class="text-success">Aberto</h4>
-    <h1>Vicente Linhares</h1>
-    <p>Rua Tibúrcio Cavalcante, 1885 - Meireles</p>
-    <p>Fortaleza, CE</p>
-    <div style="height: 3px; width: auto; background: #808080;"></div>
-    <div class="col-3 d-flex gap-3">
-      <img width="100" height="100" src="/Desafios/DesafiosSmartFit/images/forbidden-lockerroom.png">
-      <img width="100" height="100" src="/Desafios/DesafiosSmartFit/images/partial-lockerroom.png">
-      <img width="100" height="100" src="/Desafios/DesafiosSmartFit/images/required-lockerroom.png">
-    </div>
-    <div class="d-flex gap-5">
-      <div>
-        <p>Seg. a Sex.</p>
-        <p>06h ás 22h</p>
+        </div>
       </div>
-      <div>
-        <p>Sáb.</p>
-        <p>09h ás 18h</p>
-      </div>
-      <div>
-        <p>Dom.</p>
-        <p>fechada</p>
-      </div>
+      `
+      } else {
 
-    </div>
- 
-  </div>
-</div>
-</div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  </body>
+        var col = `
+      <div class="col-md-4">
+        <div class="container rounded p-3" style="min-height: 70vh; background: #f5f5f5;">
+          <div>
+            <h5 class="text-danger">Fechado</h5>
+            <h3>${element.title}</h3>
+            ${element.content}
+          </div>
+      `
+      }
+
+     
+
+      results.innerHTML += col
+
+      if (element.schedules.length == 3) {
+        var dia1 = element.schedules[0].weekdays
+        var Hora1 = element.schedules[0].hour
+        var dia2 = element.schedules[1].weekdays
+        var Hora2 = element.schedules[1].hour
+        var dia3 = element.schedules[2].weekdays
+        var Hora3 = element.schedules[2].hour
+        document.getElementById(`col${index}`).style.display = "block"
+        document.getElementById(`col${index}`).style.display = "block"
+        document.getElementById(`col${index}`).style.display = "block"
+        document.getElementById(`col${index}`).style.display = "none"
+        document.getElementById(`col${index}`).style.display = "none"
+
+        document.getElementById(`col${index}-dia`).innerHTML = dia1
+        document.getElementById(`col${index}-hora`).innerHTML = Hora1
+        
+        document.getElementById(`col${index}-dia`).innerHTML = dia2
+        document.getElementById(`col${index}-hora`).innerHTML = Hora2
+
+        document.getElementById(`col${index}-dia`).innerHTML = dia3
+        document.getElementById('col${index}-hora').innerHTML = Hora3
+
+       
+
+
+      }else if (element.schedules.length == 4) {
+        var dia1 = element.schedules[0].weekdays
+        var Hora1 = element.schedules[0].hour
+        var dia2 = element.schedules[1].weekdays
+        var Hora2 = element.schedules[1].hour
+        var dia3 = element.schedules[2].weekdays
+        var Hora3 = element.schedules[2].hour
+        var dia4 = element.schedules[3].weekdays
+        var Hora4 = element.schedules[3].hour
+        document.getElementById(`col1`).style.display = "block"
+        document.getElementById(`col2`).style.display = "block"
+        document.getElementById(`col${index}`).style.display = "block"
+        document.getElementById(`col${index}`).style.display = "block"
+        document.getElementById(`col${index}`).style.display = "none"
+        
+        document.getElementById(`col${index}-dia`).innerHTML = dia1
+        document.getElementById(`col${index}-hora`).innerHTML = Hora1
+        
+        document.getElementById(`col${index}-dia`).innerHTML = dia2
+        document.getElementById(`col${index}-hora`).innerHTML = Hora2
+
+        document.getElementById(`col${index}-dia`).innerHTML = dia3
+        document.getElementById('col${index}-hora').innerHTML = Hora3
+
+        document.getElementById(`col${index}-dia`).innerHTML = dia4
+        document.getElementById('col${index}-hora').innerHTML = Hora4
+
+
+      }else{
+        var dia1 = element.schedules[0].weekdays
+        var Hora1 = element.schedules[0].hour
+        var dia2 = element.schedules[1].weekdays
+        var Hora2 = element.schedules[1].hour
+        var dia3 = element.schedules[2].weekdays
+        var Hora3 = element.schedules[2].hour
+        var dia4 = element.schedules[3].weekdays
+        var Hora4 = element.schedules[3].hour
+        var dia5 = element.schedules[4].weekdays
+        var Hora5 = element.schedules[4].hour
+        document.getElementById(`col1`).style.display = "block"
+        document.getElementById(`col2`).style.display = "block"
+        document.getElementById(`col${index}`).style.display = "block"
+        document.getElementById(`col${index}`).style.display = "block"
+        document.getElementById(`col${index}`).style.display = "block"
+        document.getElementById(`col${index}-dia`).innerHTML = dia1
+        document.getElementById(`col${index}-hora`).innerHTML = Hora1
+        
+        document.getElementById(`col${index}-dia`).innerHTML = dia2
+        document.getElementById(`col${index}-hora`).innerHTML = Hora2
+
+        document.getElementById(`col${index}-dia`).innerHTML = dia3
+        document.getElementById('col${index}-hora').innerHTML = Hora3
+
+        document.getElementById(`col${index}-dia`).innerHTML = dia4
+        document.getElementById('col${index}-hora').innerHTML = Hora4
+
+        document.getElementById(`col${index}-dia`).innerHTML = dia5
+        document.getElementById('col${index}-hora').innerHTML = Hora5
+      }
+      
+
+    });
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </html>
