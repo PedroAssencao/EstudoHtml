@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Movie</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+
+<body class="bg-dark">
+
+    <!--Header -- Start-->
+
+    <nav class="navbar bg-dark p-3">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-center align-items-center gap-3">
+                <div style="width: 60; height: auto;">
+                    <button class="btn text-light text-center" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            class="bi bi-list" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                        </svg>
+                    </button>
+                </div>
+                <div style="width: 60; height: auto;" class="me-auto">
+                    <a class="navbar-brand text-light justify-content-center d-flex gap-2 align-items-center" href="#">
+                        <!-- colocar a imagem que desejar aqui -->
+                        <!-- <img src="https://cdn.pixabay.com/photo/2013/07/13/12/18/camera-159582_1280.png"
+                                alt="Bootstrap" width="24" height="24"> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-camera-reels" viewBox="0 0 16 16">
+                            <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0M1 3a2 2 0 1 0 4 0 2 2 0 0 0-4 0" />
+                            <path
+                                d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm6 8.73V7.27l-3.5 1.555v4.35l3.5 1.556zM1 8v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1" />
+                            <path d="M9 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6M7 3a2 2 0 1 1 4 0 2 2 0 0 1-4 0" />
+                        </svg>
+                        <label class="d-md-inline-block">Movie Center</label>
+                    </a>
+                </div>
+                <div>
+
+                </div>
+            </div>
+            <div class="d-flex">
+                <a class="btn text-light text-center" href="#" role="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                    </svg>
+                </a>
+                <div class="dropdown">
+                    <button class="btn text-light text-center dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            class="bi bi-person" viewBox="0 0 16 16">
+                            <path
+                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z" />
+                        </svg>
+                    </button>
+                    <!--Colocar um If aqui para aparecer as opções corretas caso o usuario esteja logado, fav, hist. etc-->
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="#">
+                                <div>
+                                    <h5>Criar Conta!</h5>
+                                    <p class="opacity-50">Cadastre de Graça!</p>
+                                </div>
+                            </a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">
+                                <div>
+                                    <h5>Fazer login!</h5>
+                                    <p class="opacity-50">Seja Bem Vindo de Volta!</p>
+                                </div>
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="offcanvas offcanvas-start bg-dark" tabindex="-1" id="offcanvasExample"
+                aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <h6 class="offcanvas-title opacity-50 text-light" id="offcanvasExampleLabel">NAVEGAR</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="d-flex flex-column">
+                        <a class="text-light fs-5 text-decoration-none">Populares</a>
+                        <a class="text-light fs-5 text-decoration-none">Novidade</a>
+                        <a class="text-light fs-5 text-decoration-none">A-Z</a>
+                        <a class="text-light fs-5 text-decoration-none dropdown-toggle" href="#collapseExample"
+                            data-bs-toggle="collapse" role="button" aria-expanded="true"
+                            aria-controls="collapseExample">
+                            Gêneros
+                        </a>
+                        <!--Colocar Os Generos Aqui-->
+                        <div class="collapse" id="collapseExample">
+                            <div class="text-light">
+                                <div class="d-flex ms-3 mt-2 flex-column bg-dark">
+                                    <p class="text-light">Colocar os Generos Aqui</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--Header -- end-->
+
+
+    <!--Carrosel -- start-->
+
+
+
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="image-overlay"></div>
+                <img src="/img/b31c650a-5a9d-447c-85eb-f48afb4031a8.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption">
+                    <div class="carousel-caption d-block d-md-block">
+                        <img class="h-50 w-50" src="/img/bc1fe4ab-d768-4377-ae14-a9ae7480b547.png" />
+                        <p class="mt-3 texto-cortado">O ano: 1992. A estudante universitária: Meiko Uehara. O trabalho
+                            de meio
+                            expediente: Caixa numa loja de computadores. Ou era o que ela pensava. Enquanto explorava o
+                            segundo andar da loja, Meiko encontra Alcohol Soft, um desenvolvedor de jogos adultos para
+                            PC. Ela substituiu um artista num acaso do destino. Fora do seu normal e chegando perto de
+                            um prazo, Meiko corre para completar o jogo e mostrar seu valor. O destino de sua carreira
+                            depende disso!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="image-overlay"></div>
+                <img src="/img/312c657c-cb20-4868-a944-85d2a34eb071.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption">
+                    <div class="carousel-caption d-block d-md-block">
+                        <img class="h-50 w-50" src="/img/69a172ab-3bb7-404d-97cf-ad820efff169.png" />
+                        <p class="mt-3 texto-cortado">Após sofrer um vexame na Copa do Mundo de 2018, a seleção japonesa
+                            sofre para se
+                            recompor. Falta ao time um artilheiro, uma estrela capaz de guiá-los à vitória. Com o
+                            intuito de criar um atacante com fome de bola e sede de vitória, capaz de virar jogos tidos
+                            como impossíveis, a Confederação Japonesa de Futebol reune 300 dos melhores jogadores de
+                            base do país em um só lugar. Centenas de jovens vão se enfrentar numa batalha de músculos e
+                            de egos para provar que são os melhores.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="image-overlay"></div>
+                <img src="/img/8c566c3c-15e4-4c20-a224-174b0744eaf8jj.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption">
+                    <div class="carousel-caption d-block d-md-block">
+                        <img class="h-50 w-50" src="/img/74488bf9-5b63-4a5a-a30f-e03e28c1f520jj.webp" />
+                        <p class="mt-3 texto-cortado">Sofrimento, arrependimento, vergonha: os sentimentos negativos dos
+                            humanos
+                            tornam-se Maldições, causando terríveis acidentes que podem levar até mesmo à morte. E pra
+                            piorar, Maldições só podem ser exorcizadas por outras Maldições. Certo dia, para salvar
+                            amigos que estavam sendo atacados por Maldições, Yuji Itadori engole o dedo do
+                            Ryomen-Sukuna, absorvendo sua Maldição. Ele então decide se matricular no Colégio Técnico de
+                            Feitiçaria de Tóquio, uma organização que combate as Maldições... e assim começa a heróica
+                            lenda do garoto que tornou-se uma Maldição para exorcizar uma Maldição.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!--Carrosel -- end-->
+
+    <!--Menu/Catalog -- start-->
+
+    <style>
+        .slick-slide {
+            height: auto;
+            margin: 0 10px;
+        }
+    </style>
+
+    <div class="container-fluid p-5" style="box-shadow: inset 0px -70px 110px 50px #28242c;">
+        <h3 class="text-light text-center text-lg-start">Lançamentos</h3>
+        <div class="responsive mt-5">
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/mS5SLxMYcKfUxA0utBSR5MOAWWrRegularShow.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">Regular Show
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>Regular Show</h4>
+                        <p class="opacity-50">1 temporada</p>
+                        <p class="opacity-50">13 episodios</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/qIKNIkxXYIro6JjNIGyqumrVUKLMyMidAcademy.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">My Hero Academic
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>My Hero Academic</h4>
+                        <p class="opacity-50">1 temporada</p>
+                        <p class="opacity-50">13 episodios</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/gdIrmf2DdY5mgN6ycVP0XlzKzbERick.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">Rick And Morty
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>Rick And Morty</h4>
+                        <p class="opacity-50">1 temporada</p>
+                        <p class="opacity-50">13 episodios</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/dMOpdkrDC5dQxqNydgKxXjBKyAcInvencible.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">Invencible
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>Invencible</h4>
+                        <p class="opacity-50">1 temporada</p>
+                        <p class="opacity-50">13 episodios</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/fC2HDm5t0kHl7mTm7jxMR31b7bySaul.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">Better Call Saul
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>Better Call Saul</h4>
+                        <p class="opacity-50">1 temporada</p>
+                        <p class="opacity-50">13 episodios</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/hTP1DtLGFamjfu8WqjnuQdP1n4iAtk.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">Attack On Titan
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>Attack On Titan</h4>
+                        <p class="opacity-50">1 temporada</p>
+                        <p class="opacity-50">13 episodios</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/xUfRZu2mi8jH6SzQEJGP6tjBuYjDemon.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">Demon Slayer
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>Demon Slayer</h4>
+                        <p class="opacity-50">1 temporada</p>
+                        <p class="opacity-50">13 episodios</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/5ZFUEOULaVml7pQuXxhpR2SmVUw.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">Full Methal
+                        Alchemist
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>Full Methal Alchemist</h4>
+                        <p class="opacity-50">1 temporada</p>
+                        <p class="opacity-50">13 episodios</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/NNxYkU70HPurnNCSiCjYAmacwmbababoe.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">Missão
+                        Impossivel: Sem Tempo Para Morrer
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>Missão Impossivel: Sem Tempo Para Morrer</h4>
+                        <p class="opacity-50">Filme</p>
+                        <p class="opacity-50">Duração: 3:00h</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid p-5" style="box-shadow: inset 0px -70px 110px 50px #28242c;">
+        <h3 class="text-light text-center text-lg-start">Já Vistos Por Você</h3>
+        <div class="responsive mt-5">
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/mS5SLxMYcKfUxA0utBSR5MOAWWrRegularShow.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">Regular Show
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>Regular Show</h4>
+                        <p class="opacity-50">1 temporada</p>
+                        <p class="opacity-50">13 episodios</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/qIKNIkxXYIro6JjNIGyqumrVUKLMyMidAcademy.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">My Hero Academic
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>My Hero Academic</h4>
+                        <p class="opacity-50">1 temporada</p>
+                        <p class="opacity-50">13 episodios</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/gdIrmf2DdY5mgN6ycVP0XlzKzbERick.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">Rick And Morty
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>Rick And Morty</h4>
+                        <p class="opacity-50">1 temporada</p>
+                        <p class="opacity-50">13 episodios</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/dMOpdkrDC5dQxqNydgKxXjBKyAcInvencible.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">Invencible
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>Invencible</h4>
+                        <p class="opacity-50">1 temporada</p>
+                        <p class="opacity-50">13 episodios</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/fC2HDm5t0kHl7mTm7jxMR31b7bySaul.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">Better Call Saul
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>Better Call Saul</h4>
+                        <p class="opacity-50">1 temporada</p>
+                        <p class="opacity-50">13 episodios</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/hTP1DtLGFamjfu8WqjnuQdP1n4iAtk.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">Attack On Titan
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>Attack On Titan</h4>
+                        <p class="opacity-50">1 temporada</p>
+                        <p class="opacity-50">13 episodios</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/xUfRZu2mi8jH6SzQEJGP6tjBuYjDemon.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">Demon Slayer
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>Demon Slayer</h4>
+                        <p class="opacity-50">1 temporada</p>
+                        <p class="opacity-50">13 episodios</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/5ZFUEOULaVml7pQuXxhpR2SmVUw.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">Full Methal
+                        Alchemist
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>Full Methal Alchemist</h4>
+                        <p class="opacity-50">1 temporada</p>
+                        <p class="opacity-50">13 episodios</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/NNxYkU70HPurnNCSiCjYAmacwmbababoe.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">Missão
+                        Impossivel: Sem Tempo Para Morrer
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>Missão Impossivel: Sem Tempo Para Morrer</h4>
+                        <p class="opacity-50">Filme</p>
+                        <p class="opacity-50">Duração: 3:00h</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid p-5" style="box-shadow: inset 0px -70px 110px 50px #28242c;">
+        <h3 class="text-light text-center text-lg-start">On Demand</h3>
+        <div class="responsive mt-5">
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/mS5SLxMYcKfUxA0utBSR5MOAWWrRegularShow.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">Regular Show
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>Regular Show</h4>
+                        <p class="opacity-50">1 temporada</p>
+                        <p class="opacity-50">13 episodios</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/qIKNIkxXYIro6JjNIGyqumrVUKLMyMidAcademy.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">My Hero Academic
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>My Hero Academic</h4>
+                        <p class="opacity-50">1 temporada</p>
+                        <p class="opacity-50">13 episodios</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/gdIrmf2DdY5mgN6ycVP0XlzKzbERick.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">Rick And Morty
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>Rick And Morty</h4>
+                        <p class="opacity-50">1 temporada</p>
+                        <p class="opacity-50">13 episodios</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/dMOpdkrDC5dQxqNydgKxXjBKyAcInvencible.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">Invencible
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>Invencible</h4>
+                        <p class="opacity-50">1 temporada</p>
+                        <p class="opacity-50">13 episodios</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/fC2HDm5t0kHl7mTm7jxMR31b7bySaul.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">Better Call Saul
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>Better Call Saul</h4>
+                        <p class="opacity-50">1 temporada</p>
+                        <p class="opacity-50">13 episodios</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/hTP1DtLGFamjfu8WqjnuQdP1n4iAtk.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">Attack On Titan
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>Attack On Titan</h4>
+                        <p class="opacity-50">1 temporada</p>
+                        <p class="opacity-50">13 episodios</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/xUfRZu2mi8jH6SzQEJGP6tjBuYjDemon.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">Demon Slayer
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>Demon Slayer</h4>
+                        <p class="opacity-50">1 temporada</p>
+                        <p class="opacity-50">13 episodios</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/5ZFUEOULaVml7pQuXxhpR2SmVUw.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">Full Methal
+                        Alchemist
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>Full Methal Alchemist</h4>
+                        <p class="opacity-50">1 temporada</p>
+                        <p class="opacity-50">13 episodios</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/NNxYkU70HPurnNCSiCjYAmacwmbababoe.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">Missão
+                        Impossivel: Sem Tempo Para Morrer
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>Missão Impossivel: Sem Tempo Para Morrer</h4>
+                        <p class="opacity-50">Filme</p>
+                        <p class="opacity-50">Duração: 3:00h</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid p-5" style="box-shadow: inset 0px -70px 110px 50px #28242c;">
+        <h3 class="text-light text-center text-lg-start">Mais Bem Avaliados</h3>
+        <div class="responsive mt-5">
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/mS5SLxMYcKfUxA0utBSR5MOAWWrRegularShow.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">Regular Show
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>Regular Show</h4>
+                        <p class="opacity-50">1 temporada</p>
+                        <p class="opacity-50">13 episodios</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/qIKNIkxXYIro6JjNIGyqumrVUKLMyMidAcademy.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">My Hero Academic
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>My Hero Academic</h4>
+                        <p class="opacity-50">1 temporada</p>
+                        <p class="opacity-50">13 episodios</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/gdIrmf2DdY5mgN6ycVP0XlzKzbERick.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">Rick And Morty
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>Rick And Morty</h4>
+                        <p class="opacity-50">1 temporada</p>
+                        <p class="opacity-50">13 episodios</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/dMOpdkrDC5dQxqNydgKxXjBKyAcInvencible.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">Invencible
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>Invencible</h4>
+                        <p class="opacity-50">1 temporada</p>
+                        <p class="opacity-50">13 episodios</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/fC2HDm5t0kHl7mTm7jxMR31b7bySaul.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">Better Call Saul
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>Better Call Saul</h4>
+                        <p class="opacity-50">1 temporada</p>
+                        <p class="opacity-50">13 episodios</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/hTP1DtLGFamjfu8WqjnuQdP1n4iAtk.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">Attack On Titan
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>Attack On Titan</h4>
+                        <p class="opacity-50">1 temporada</p>
+                        <p class="opacity-50">13 episodios</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/xUfRZu2mi8jH6SzQEJGP6tjBuYjDemon.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">Demon Slayer
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>Demon Slayer</h4>
+                        <p class="opacity-50">1 temporada</p>
+                        <p class="opacity-50">13 episodios</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/5ZFUEOULaVml7pQuXxhpR2SmVUw.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">Full Methal
+                        Alchemist
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>Full Methal Alchemist</h4>
+                        <p class="opacity-50">1 temporada</p>
+                        <p class="opacity-50">13 episodios</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <figure class="figure">
+                    <img class="img-fluid" src="/img/NNxYkU70HPurnNCSiCjYAmacwmbababoe.jpg" />
+                    <figcaption class="figure-caption text-center text-light fs-6 mt-3 font-monospace">Missão
+                        Impossivel: Sem Tempo Para Morrer
+                    </figcaption>
+                </figure>
+                <div class="card-info">
+                    <!-- Aqui vão as informações adicionais que serão exibidas no hover -->
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h4>Missão Impossivel: Sem Tempo Para Morrer</h4>
+                        <p class="opacity-50">Filme</p>
+                        <p class="opacity-50">Duração: 3:00h</p>
+                        <!--Insira A Sinopse aqui-->
+                        <p class="limited-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos
+                            quibusdam</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Menu/Catalog -- end-->
+
+
+    <!--Footer - start-->
+    <footer class=" text-center text-lg-start p-3 bg-dark">
+        <!-- Copyright -->
+        <div class="text-center p-3 bg-dark text-light">
+            © 2023 Copyright: Assenção
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!--Footer - end-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="/scripts/Carrosel.js"></script>
+    <script src="/scripts/script.js"></script>
+</body>
+
+</html>
