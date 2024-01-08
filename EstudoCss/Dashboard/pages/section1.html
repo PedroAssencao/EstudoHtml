@@ -44,7 +44,7 @@
             <!--Sections-->
             <ul class="list-unstyled px-2">
                 <!--Adicionar Um Li para cada section-->
-                <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="fal fa-home"></i>
+                <li class=""><a href="/pages/index.html" class="text-decoration-none px-3 py-2 d-block"><i class="fal fa-home"></i>
                         Dashboard</a></li>
                 <li class="active"><a href="#" class="text-decoration-none px-3 py-2 d-block"><i
                             class="fal fa-list"></i>
@@ -99,6 +99,8 @@
 
                 </div>
 
+          
+
                 <div class="container-fluid mt-4 table-responsive" style="max-width: 1920;">
 
 
@@ -121,14 +123,14 @@
                                                 </svg>
                                                 Adicionar
                                             </button>
-                                            <a class="btn btn-danger text-end">
+                                            <button disabled data-bs-toggle="modal" id="btn" data-bs-target="#exampleModal2" class="btn btn-danger text-end">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
                                                     fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
                                                     <path
                                                         d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
                                                 </svg>
                                                 Remover
-                                            </a>
+                                            </button>
                                         </div>
                                     </div>
                                 </th>
@@ -138,6 +140,7 @@
                             </tr>
                         </thead>
 
+            
                         <thead class="p-5">
 
                             <tr>
@@ -156,7 +159,7 @@
                             <tr>
                                 <th scope="row">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <input class="form-check-input checkbox" type="checkbox" value="" id="flexCheckDefault">
                                         1
                                     </div>
                                 </th>
@@ -187,7 +190,7 @@
                             <tr>
                                 <th scope="row">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <input class="form-check-input checkbox" type="checkbox" value="" id="flexCheckDefault">
                                         2
                                     </div>
                                 </th>
@@ -217,7 +220,7 @@
                             <tr>
                                 <th scope="row">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <input class="form-check-input checkbox" type="checkbox" value="" id="flexCheckDefault">
                                         3
                                     </div>
                                 </th>
@@ -247,7 +250,7 @@
                             <tr>
                                 <th scope="row">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <input class="form-check-input checkbox" type="checkbox" value="" id="flexCheckDefault">
                                         4
                                     </div>
                                 </th>
@@ -277,7 +280,127 @@
                             <tr>
                                 <th scope="row">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <input class="form-check-input checkbox" type="checkbox" value="" id="flexCheckDefault">
+                                        4
+                                    </div>
+                                </th>
+                                <td>Larry the Bird</td>
+                                <td>Larry the Bird</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td class="d-flex gap-2 justify-content-center align-items-center"
+                                    style="height: 6rem;">
+                                    <a class="btn btn-warning">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                                            <path
+                                                d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
+                                        </svg>
+                                    </a>
+                                    <a class="btn btn-danger">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                                            fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                            <path
+                                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                                        </svg>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div class="form-check">
+                                        <input class="form-check-input checkbox" type="checkbox" value="" id="flexCheckDefault">
+                                        4
+                                    </div>
+                                </th>
+                                <td>Larry the Bird</td>
+                                <td>Larry the Bird</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td class="d-flex gap-2 justify-content-center align-items-center"
+                                    style="height: 6rem;">
+                                    <a class="btn btn-warning">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                                            <path
+                                                d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
+                                        </svg>
+                                    </a>
+                                    <a class="btn btn-danger">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                                            fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                            <path
+                                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                                        </svg>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div class="form-check">
+                                        <input class="form-check-input checkbox" type="checkbox" value="" id="flexCheckDefault">
+                                        4
+                                    </div>
+                                </th>
+                                <td>Larry the Bird</td>
+                                <td>Larry the Bird</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td class="d-flex gap-2 justify-content-center align-items-center"
+                                    style="height: 6rem;">
+                                    <a class="btn btn-warning">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                                            <path
+                                                d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
+                                        </svg>
+                                    </a>
+                                    <a class="btn btn-danger">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                                            fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                            <path
+                                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                                        </svg>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div class="form-check">
+                                        <input class="form-check-input checkbox" type="checkbox" value="" id="flexCheckDefault">
+                                        4
+                                    </div>
+                                </th>
+                                <td>Larry the Bird</td>
+                                <td>Larry the Bird</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td class="d-flex gap-2 justify-content-center align-items-center"
+                                    style="height: 6rem;">
+                                    <a class="btn btn-warning">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                                            <path
+                                                d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
+                                        </svg>
+                                    </a>
+                                    <a class="btn btn-danger">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                                            fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                            <path
+                                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                                        </svg>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div class="form-check">
+                                        <input class="form-check-input checkbox" type="checkbox" value="" id="flexCheckDefault">
                                         4
                                     </div>
                                 </th>
@@ -311,12 +434,12 @@
             </div>
             <!--Footer-->
             <footer class="bg-dark text-center text-lg-start">
-                <!-- Copyright -->
-                <div class="text-center fixed-bottom p-4 my-auto bg-dark">
+                
+                <div class="text-center p-4 my-auto bg-dark">
                     © 2024 Copyright:
                     <a class="text-info" href="#">Assenção</a>
                 </div>
-                <!-- Copyright -->
+                
             </footer>
         </div>
 
@@ -364,6 +487,32 @@
             </div>
         </div>
     </div>
+
+    <!--Modal Excluir-->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Excluir Itens</h1>
+                <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex justify-content-center align-items-center flex-column">
+                    <p class="fs-4">Voce realmente deseja excluir os itens selecionados?</p>
+                    <p class="fs-5 opacity-50">Esta ação não tera volta!</p>
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center align-items-center">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                <form method="post" aspcontroller="#" aspaction="#">
+                    <button type="button" class="text-center btn btn-danger">Excluir</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

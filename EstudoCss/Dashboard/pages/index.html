@@ -42,12 +42,13 @@
         <!--Adicionar Um Li para cada section-->
         <li class="active"><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="fal fa-home"></i>
             Dashboard</a></li>
-        <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="fal fa-list"></i>
+        <li class=""><a href="/pages/section1.html" class="text-decoration-none px-3 py-2 d-block"><i
+              class="fal fa-list"></i>
             Section1</a></li>
         <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i
               class="fal fa-envelope-open-text"></i> Section2</a></li>
         <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="fal fa-users"></i>
-          Section3</a></li>
+            Section3</a></li>
       </ul>
       <hr class="text-light h-color opacity-50 mx-2">
 
@@ -75,89 +76,69 @@
             </button>
             <label class="fs-4 text-light">DashBoard</label>
           </div>
+          <div class="mt-3 d-none d-lg-block" style="max-width: 350px;">
+            <div class="input-group mb-3">
+              <input type="text" class="bg-dark form-control text-light" placeholder="Buscar"
+                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+              <span class="input-group-text bg-dark text-light" id="inputGroup-sizing-default">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg>
+              </span>
+            </div>
+          </div>
         </div>
       </nav>
 
       <!--Conteudo da Seção-->
       <div class="dashboard-content px-3 pt-4">
 
-        
-        <h2 class="fs-5 mt-3 text-center">Dashboard</h2>
-
-        
-        <div class="container mt-3" style="max-width: 350px;">
-          <div class="input-group mb-3">
-            <span class="input-group-text bg-dark text-light" id="inputGroup-sizing-default">Buscar</span>
-            <input type="text" class="bg-dark form-control text-light" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <div class="d-block d-lg-none">
+          <div class="container mt-3" style="max-width: 350px;">
+            <div class="input-group mb-3">
+              <span class="input-group-text bg-dark text-light" id="inputGroup-sizing-default">Buscar</span>
+              <input type="text" class="bg-dark form-control text-light" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default">
+            </div>
           </div>
-          
+        </div>
+
+        <div class="container-fluid bg-black rounded-4 mt-4 p-5">
+          <div class="row row-cols-2 row-cols-md-4">
+            <div class="col bg-warning p-5 mb-4 mr-4">
+              col1
+            </div>
+            <div class="col bg-success p-5 mb-4 mr-4">
+              col2
+            </div>
+            <div class="col bg-primary p-5 mb-4 mr-4">
+              col3
+            </div>
+            <div class="col bg-secondary p-5 mb-4 mr-4">
+              col4
+            </div>
+          </div>
         </div>
         
-        <div class="container-fluid mt-4 table-responsive" style="max-width: 1920;">
-          <table class="table table-dark text-center table-bordered table-striped">
-            <thead class="p-5">
-              <tr >
-                <th colspan="7">DashBoard</th>
-                <th colspan="7"><a class="btn btn-secondary">Adicionar</a></th>
-              </tr>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th colspan="2" scope="col">Ações</th>
-                
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td><a class="btn btn-success">Atualizar</a></td>
-                <td><a class="btn btn-danger">Remover</a></td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td><a class="btn btn-success">Atualizar</a></td>
-                <td><a class="btn btn-danger">Remover</a></td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-                <td>@twitter</td>
-                <td>@twitter</td>
-                <td><a class="btn btn-success">Atualizar</a></td>
-                <td><a class="btn btn-danger">Remover</a></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        
+
+
+
       </div>
 
-      <footer class="bg-dark text-center text-lg-start" style="margin-bottom: auto;">
-        <!-- Copyright -->
-        <div class="text-center p-3 bg-dark fixed-bottom">
+      <!--Footer-->
+      <!-- <footer class="bg-dark text-center text-lg-start">
+
+        <div class="text-center p-4 my-auto bg-dark">
           © 2024 Copyright:
           <a class="text-info" href="#">Assenção</a>
         </div>
-        <!-- Copyright -->
-      </footer>
-      
+
+      </footer> -->
+
     </div>
-    
+
   </div>
 
 

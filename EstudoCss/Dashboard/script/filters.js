@@ -7,3 +7,15 @@ $(document).ready(function(){
       });
     });
   });
+
+//buttons
+
+    const checkboxes = document.querySelectorAll('.checkbox');
+    const meuBotao = document.getElementById('btn');
+
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            const algumSelecionado = [...checkboxes].some(checkbox => checkbox.checked);
+            meuBotao.disabled = !algumSelecionado;
+        });
+    });
