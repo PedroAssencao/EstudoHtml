@@ -2,153 +2,751 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DashBoard</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="/style/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style/style.css">
 </head>
 
-<body style="background-color: #3e3e42;" class="text-light">
-  <div class="main-container d-flex">
-    <div class="sidebar bg-dark" id="side_nav">
-      <!--Header-->
-      <div class="header-box px-2 pt-3 pb-4 d-flex justify-content-between">
-        <div class="d-flex justify-content-center align-items-center gap-3">
+<body>
 
-          <!--Colocar um If aqui caso o Usuario tenha imagem ou não-->
-          <a style="cursor: pointer;" href="#"><img class="img-fluid rounded-circle border border-dark"
-              style="object-fit: cover; object-position: center; width: 50px; height: 50px;"
-              src="/img/mark_grayson_s_alternatives___viltrumite_mark_by_hellbram9903_dety3xk-375w.jpg" alt=""></a>
+    <div class="container-fluid">
+        <div class="row">
 
-          <label class="fs-4 text-white">
-            <!--Caso o Usuario So tenha nome colocar us ou alguma outra coisa-->
-            <!-- <span class="bg-white text-dark rounded shadow px-2 me-2">US</span> -->
-            User Name</label>
-          <button class="btn d-md-none d-block close-btn px-1 py-0 text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
-              viewBox="0 0 16 16">
-              <path fill-rule="evenodd"
-                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-            </svg>
-          </button>
+            <!--Adicionar o conteudo da side bar aqui-->
+            <div class="col-1 bg-dark sidenav" tabindex="-1" id="offcanvasExample">
+
+                <div class="offcanvas-header px-2 pt-3 pb-4 d-flex justify-content-center">
+                    <div class="d-flex justify-content-center align-items-center gap-3">
+
+                        <!--Colocar um If aqui caso o Usuario tenha imagem ou não-->
+                        <a style="cursor: pointer;" href="#"><img class="img-fluid rounded-circle border border-dark"
+                                style="object-fit: cover; object-position: center; width: 50px; height: 50px;"
+                                src="/img/20231208_153258.jpg" alt="User Pic"></a>
+
+                        <label class="fs-4 text-white">
+                            <!--Caso o Usuario So tenha nome colocar us ou alguma outra coisa-->
+                            <!-- <span class="bg-white text-dark rounded shadow px-2">US</span> -->
+                            User Name</label>
+                        <button class="btn d-lg-none d-block close-btn px-1 py-0 text-white"
+                            data-bs-dismiss="offcanvas">
+                            <!--Escolher Depois Qual Icone e Melhor-->
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                class="bi bi-list" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                            </svg> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                class="bi bi-x" viewBox="0 0 16 16">
+                                <path
+                                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </button>
+                    </div>
+
+                </div>
+                <hr class="text-light opacity-50">
+
+                <!--Parte das seções da side bar-->
+                <div
+                    class="container-fluid d-flex justify-content-start align-items-center flex-column text-dark text-center gap-3 p-5">
+                    <a href="/pages/index.html" class="btn btn-light" style="width: 17rem;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-speedometer" viewBox="0 0 16 16">
+                            <path
+                                d="M8 2a.5.5 0 0 1 .5.5V4a.5.5 0 0 1-1 0V2.5A.5.5 0 0 1 8 2M3.732 3.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707M2 8a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8m9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5m.754-4.246a.39.39 0 0 0-.527-.02L7.547 7.31A.91.91 0 1 0 8.85 8.569l3.434-4.297a.39.39 0 0 0-.029-.518z" />
+                            <path fill-rule="evenodd"
+                                d="M6.664 15.889A8 8 0 1 1 9.336.11a8 8 0 0 1-2.672 15.78zm-4.665-4.283A11.95 11.95 0 0 1 8 10c2.186 0 4.236.585 6.001 1.606a7 7 0 1 0-12.002 0" />
+                        </svg>
+                        Dashboard
+                    </a>
+
+                    <a href="/pages/section1.html" class="btn text-light" onmouseover="$(this).addClass('bg-light text-dark')"
+                        onmouseout="$(this).removeClass('bg-light text-dark')" style="width: 17rem;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-pen" viewBox="0 0 16 16">
+                            <path
+                                d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
+                        </svg>
+                        section 1
+                    </a>
+
+                    <a href="#" class="btn text-light" onmouseover="$(this).addClass('bg-light text-dark')"
+                        onmouseout="$(this).removeClass('bg-light text-dark')" style="width: 17rem;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-pen" viewBox="0 0 16 16">
+                            <path
+                                d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
+                        </svg>
+                        section 2
+                    </a>
+
+                    <a href="#" class="btn text-light" onmouseover="$(this).addClass('bg-light text-dark')"
+                        onmouseout="$(this).removeClass('bg-light text-dark')" style="width: 17rem;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-pen" viewBox="0 0 16 16">
+                            <path
+                                d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
+                        </svg>
+                        section 3
+                    </a>
+
+                    <a href="#" class="btn text-light" onmouseover="$(this).addClass('bg-light text-dark')"
+                        onmouseout="$(this).removeClass('bg-light text-dark')" style="width: 17rem;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-pen" viewBox="0 0 16 16">
+                            <path
+                                d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
+                        </svg>
+                        section 4
+                    </a>
+                </div>
+                <hr class="opacity-75 text-light">
+                <div
+                    class="container-fluid d-flex justify-content-start gap-4 align-items-center flex-column text-dark text-center p-5">
+                    <a href="#" class="btn text-light" onmouseover="$(this).addClass('bg-light text-dark')"
+                        onmouseout="$(this).removeClass('bg-light text-dark')" style="width: 17rem;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z" />
+                            <path fill-rule="evenodd"
+                                d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z" />
+                        </svg>
+                        Logout
+                    </a>
+                </div>
+            </div>
+            <div class="col bg-dark text-light opacity-75">
+                <div
+                    class="container-fluid bg-black d-flex justify-content-between align-items-center text-light rounded-4 mt-4 p-4">
+                    <div class="d-block d-lg-none">
+                        <p class="d-flex fs-4 justify-content-center align-items-center">
+                            <button class="fs-4 d-lg-none btn bg-transparent text-light" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasExample">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                    class="bi bi-list" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                                </svg>
+                            </button>
+                            <svg class="d-lg-none fs-4" xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                                fill="currentColor" class="bi bi-speedometer" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 2a.5.5 0 0 1 .5.5V4a.5.5 0 0 1-1 0V2.5A.5.5 0 0 1 8 2M3.732 3.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707M2 8a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8m9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5m.754-4.246a.39.39 0 0 0-.527-.02L7.547 7.31A.91.91 0 1 0 8.85 8.569l3.434-4.297a.39.39 0 0 0-.029-.518z" />
+                                <path fill-rule="evenodd"
+                                    d="M6.664 15.889A8 8 0 1 1 9.336.11a8 8 0 0 1-2.672 15.78zm-4.665-4.283A11.95 11.95 0 0 1 8 10c2.186 0 4.236.585 6.001 1.606a7 7 0 1 0-12.002 0" />
+                            </svg>
+
+                        </p>
+                    </div>
+
+                    <div class="d-none d-lg-block">
+                        <p class="d-flex fs-4 justify-content-center align-items-center">
+                            Dashboard
+                        </p>
+                    </div>
+
+                    <div class="input-group mb-3 pesquisa">
+
+                        <span class="input-group-text text-light bg-dark" id="inputGroup-sizing-default">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg>
+                        </span>
+                        <input type="text" id="myInput" class="form-control text-light bg-dark " placeholder="Buscar"
+                            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                </div>
+
+                <!--Inserir Os Dados Aqui-->
+                <div class="container-fluid bg-black text-light rounded-4 mt-4 p-4">
+                    <p class="fs-6 text-center text-xl-start">
+                        Dados De Hoje
+                    </p>
+                    <div class="row row-cols-4 mt-4 gap-3 align-items-stretch justify-content-center">
+                        <div class="col bg-primary d-flex rounded-3" style="width: 23rem; height: auto;"> Lorem ipsum
+                            dolor sit
+                            amet
+                            consectetur adipisicing elit. Excepturi omnis harum ratione quasi, aperiam ducimus id nemo,
+                            cumque laborum delectus soluta enim nihil quaerat rerum amet reprehenderit dolore ipsam.
+                            Numquam!</div>
+                        <div class="col bg-secondary rounded-3 d-flex" style="width: 23rem; height: auto;"> Lorem ipsum
+                            dolor sit
+                            amet
+                            consectetur adipisicing elit. Cum dignissimos modi aliquid ad, explicabo quasi laborum odio
+                            accusantium quas minus quod tenetur? At, nisi inventore qui rerum perspiciatis sint facilis?
+                        </div>
+                        <div class="col bg-danger rounded-3 d-flex" style="width: 23rem; height: auto;"> Lorem ipsum
+                            dolor sit,
+                            amet
+                            consectetur adipisicing elit. Deleniti molestiae amet consequuntur tenetur nostrum quasi.
+                            Minima sint accusamus dignissimos, rerum, corrupti iure nam ab laborum adipisci animi vel
+                            odit modi!</div>
+                        <div class="col bg-success rounded-3 d-flex" style="width: 23rem; height: auto;"> Lorem ipsum
+                            dolor sit
+                            amet
+                            consectetur adipisicing elit. Quidem rem repellendus nostrum pariatur saepe ipsa ex quia
+                            dolores totam sapiente provident cumque maiores optio eligendi sint reiciendis, placeat
+                            dolorum facilis!</div>
+                    </div>
+                </div>
+
+         
+
+
+                <div class="container-fluid bg-black text-light rounded-4 mt-4 p-5">
+                    <p class="fs-6 ms-3 text-center text-xl-start">Dados de Finança</p>
+                    <div class="table-responsive">
+                        <table class="table table-dark text-center rounded-5 table-striped tabela-transparente">
+
+                            <thead>
+
+                                <tr>
+                                    <th colspan="7" class="" scope="col">
+                                        <div class="d-flex justify-content-between align-items-center gap-4 p-2">
+                                            <div class="d-flex align-items-center">
+                                                Gerencimaneto Section
+                                            </div>
+
+
+                                            <div class="d-flex gap-3">
+                                                <button data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                                    class="btn btn-success text-end">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                                                        fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                                    </svg>
+                                                    Adicionar
+                                                </button>
+                                                <button disabled data-bs-toggle="modal" id="btn"
+                                                    data-bs-target="#exampleModal2" class="btn btn-danger text-end">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                                                        fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                                                    </svg>
+                                                    Remover
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </th>
+
+
+
+                                </tr>
+
+
+                                <tr>
+                                    <th colspan="7" class="" scope="col">
+
+
+
+                                        <div id="itenstotais" class="d-flex align-items-center ms-2">
+                                            Itens Encontrados: ?
+                                        </div>
+
+                                        <div class="d-flex align-items-start flex-wrap ms-2">
+                                            <div class="d-flex gap-3 mt-4 me-auto">
+                                                <label style="text-wrap: nowrap;" for="startDate">Data Inicial:</label>
+                                                <input id="startDate" class="form-control bg-dark text-light"
+                                                    type="date" />
+                                                <label style="text-wrap: nowrap;" for="endDate">Data Final:</label>
+                                                <input id="endDate" class="form-control bg-dark text-light"
+                                                    type="date" />
+                                            </div>
+                                            <button id="clearFilters" class="btn btn-primary align-self-end mt-4">Limpar
+                                                Filtros</button>
+                                        </div>
+
+
+
+
+                    </div>
+                    </th>
+
+
+
+                    </tr>
+
+                    </thead>
+
+
+                    <thead class="p-5">
+
+                        <tr>
+                            <th class="d-flex justify-content-center align-items-center" scope="col">#</th>
+                            </th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                            <th scope="col">Data inicial</th>
+                            <th scope="col">Data Final</th>
+                            <th colspan="2" scope="col">Ações</th>
+
+                        </tr>
+                    </thead>
+                    <tbody id="myTable">
+                        <tr>
+                            <th scope="row">
+                                <div class="form-check">
+                                    <input class="form-check-input checkbox" type="checkbox" value=""
+                                        id="flexCheckDefault">
+                                    1
+                                </div>
+                            </th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td class="date-column">09/10/2024</td>
+                            <td class="date-column">10/10/2024</td>
+                            <td class="d-flex gap-2 justify-content-center align-items-center" style="height: 6rem;">
+                                <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-pen" viewBox="0 0 16 16">
+                                        <path
+                                            d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
+                                    </svg>
+                                </a>
+                                <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                        class="bi bi-x" viewBox="0 0 16 16">
+                                        <path
+                                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                                    </svg>
+                                </a>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <div class="form-check">
+                                    <input class="form-check-input checkbox" type="checkbox" value=""
+                                        id="flexCheckDefault">
+                                    2
+                                </div>
+                            </th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            <td class="date-column">09/10/2024</td>
+                            <td class="date-column">10/10/2024</td>
+                            <td class="d-flex gap-2 justify-content-center align-items-center" style="height: 6rem;">
+                                <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-pen" viewBox="0 0 16 16">
+                                        <path
+                                            d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
+                                    </svg>
+                                </a>
+                                <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                        class="bi bi-x" viewBox="0 0 16 16">
+                                        <path
+                                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                                    </svg>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <div class="form-check">
+                                    <input class="form-check-input checkbox" type="checkbox" value=""
+                                        id="flexCheckDefault">
+                                    3
+                                </div>
+                            </th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            <td class="date-column">09/10/2024</td>
+                            <td class="date-column">10/10/2024</td>
+                            <td class="d-flex gap-2 justify-content-center align-items-center" style="height: 6rem;">
+                                <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-pen" viewBox="0 0 16 16">
+                                        <path
+                                            d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
+                                    </svg>
+                                </a>
+                                <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                        class="bi bi-x" viewBox="0 0 16 16">
+                                        <path
+                                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                                    </svg>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <div class="form-check">
+                                    <input class="form-check-input checkbox" type="checkbox" value=""
+                                        id="flexCheckDefault">
+                                    4
+                                </div>
+                            </th>
+                            <td>Larry the Bird</td>
+                            <td>Larry the Bird</td>
+                            <td>@twitter</td>
+                            <td class="date-column">09/10/2024</td>
+                            <td class="date-column">10/10/2024</td>
+                            <td class="d-flex gap-2 justify-content-center align-items-center" style="height: 6rem;">
+                                <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-pen" viewBox="0 0 16 16">
+                                        <path
+                                            d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
+                                    </svg>
+                                </a>
+                                <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                        class="bi bi-x" viewBox="0 0 16 16">
+                                        <path
+                                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                                    </svg>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <div class="form-check">
+                                    <input class="form-check-input checkbox" type="checkbox" value=""
+                                        id="flexCheckDefault">
+                                    4
+                                </div>
+                            </th>
+                            <td>Larry the Bird</td>
+                            <td>Larry the Bird</td>
+                            <td>@twitter</td>
+                            <td class="date-column">09/10/2024</td>
+                            <td class="date-column">10/10/2024</td>
+                            <td class="d-flex gap-2 justify-content-center align-items-center" style="height: 6rem;">
+                                <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-pen" viewBox="0 0 16 16">
+                                        <path
+                                            d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
+                                    </svg>
+                                </a>
+                                <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                        class="bi bi-x" viewBox="0 0 16 16">
+                                        <path
+                                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                                    </svg>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <div class="form-check">
+                                    <input class="form-check-input checkbox" type="checkbox" value=""
+                                        id="flexCheckDefault">
+                                    4
+                                </div>
+                            </th>
+                            <td>Larry the Bird</td>
+                            <td>Larry the Bird</td>
+                            <td>@twitter</td>
+                            <td class="date-column">09/10/2024</td>
+                            <td class="date-column">10/10/2024</td>
+                            <td class="d-flex gap-2 justify-content-center align-items-center" style="height: 6rem;">
+                                <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-pen" viewBox="0 0 16 16">
+                                        <path
+                                            d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
+                                    </svg>
+                                </a>
+                                <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                        class="bi bi-x" viewBox="0 0 16 16">
+                                        <path
+                                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                                    </svg>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <div class="form-check">
+                                    <input class="form-check-input checkbox" type="checkbox" value=""
+                                        id="flexCheckDefault">
+                                    4
+                                </div>
+                            </th>
+                            <td>Larry the Bird</td>
+                            <td>Larry the Bird</td>
+                            <td>@twitter</td>
+                            <td class="date-column">09/10/2024</td>
+                            <td class="date-column">10/10/2024</td>
+                            <td class="d-flex gap-2 justify-content-center align-items-center" style="height: 6rem;">
+                                <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-pen" viewBox="0 0 16 16">
+                                        <path
+                                            d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
+                                    </svg>
+                                </a>
+                                <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                        class="bi bi-x" viewBox="0 0 16 16">
+                                        <path
+                                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                                    </svg>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <div class="form-check">
+                                    <input class="form-check-input checkbox" type="checkbox" value=""
+                                        id="flexCheckDefault">
+                                    4
+                                </div>
+                            </th>
+                            <td>Larry the Bird</td>
+                            <td>Larry the Bird</td>
+                            <td>@twitter</td>
+                            <td class="date-column">09/10/2024</td>
+                            <td class="date-column">10/10/2024</td>
+                            <td class="d-flex gap-2 justify-content-center align-items-center" style="height: 6rem;">
+                                <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-pen" viewBox="0 0 16 16">
+                                        <path
+                                            d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
+                                    </svg>
+                                </a>
+                                <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                        class="bi bi-x" viewBox="0 0 16 16">
+                                        <path
+                                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                                    </svg>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <div class="form-check">
+                                    <input class="form-check-input checkbox" type="checkbox" value=""
+                                        id="flexCheckDefault">
+                                    5
+                                </div>
+                            </th>
+                            <td>Larry the Bird</td>
+                            <td>Larry the Bird</td>
+                            <td>@twitter</td>
+                            <td class="date-column">11/10/2024</td>
+                            <td class="date-column">12/10/2024</td>
+                            <td class="d-flex gap-2 justify-content-center align-items-center" style="height: 6rem;">
+                                <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-pen" viewBox="0 0 16 16">
+                                        <path
+                                            d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
+                                    </svg>
+                                </a>
+                                <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                        class="bi bi-x" viewBox="0 0 16 16">
+                                        <path
+                                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                                    </svg>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+
+
+
+
+
+                </div>
+                <!--Footer-->
+                <div
+                    class="container-fluid d-flex justify-content-center mt-5 align-items-center gap-2 flex-column text-light rounded-4 mt-4 p-4">
+                    <p class="fs-5 text-center">
+                        &copy; Assenção 2024
+                    </p>
+                    <p class="fs-6 text-center opacity-50">
+                        Versão 0.1
+                    </p>
+                </div>
+            </div>
+
+
+
+
         </div>
-
-      </div>
-
-      <!--Sections-->
-      <ul class="list-unstyled px-2">
-        <!--Adicionar Um Li para cada section-->
-        <li class="active"><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="fal fa-home"></i>
-            Dashboard</a></li>
-        <li class=""><a href="/pages/section1.html" class="text-decoration-none px-3 py-2 d-block"><i
-              class="fal fa-list"></i>
-            Section1</a></li>
-        <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i
-              class="fal fa-envelope-open-text"></i> Section2</a></li>
-        <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="fal fa-users"></i>
-            Section3</a></li>
-      </ul>
-      <hr class="text-light h-color opacity-50 mx-2">
-
-      <ul class="list-unstyled px-2">
-        <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="fal fa-bars"></i>
-            Logout</a></li>
-
-
-      </ul>
     </div>
 
-    <!--Inseir conteudo da pagina aqui-->
+    <!--Modais-->
 
-    <!--Navbar-->
-    <div class="content">
-      <nav class="navbar navbar-expand-md bg-dark p-4">
-        <div class="container-fluid">
-          <div class="d-flex justify-content-center align-items-center">
-            <button class="btn px-1 py-0 open-btn me-2 d-md-none text-light">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
-                viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-              </svg>
-            </button>
-            <label class="fs-4 text-light">DashBoard</label>
-          </div>
-          <div class="mt-3 d-none d-lg-block" style="max-width: 350px;">
-            <div class="input-group mb-3">
-              <input type="text" class="bg-dark form-control text-light" placeholder="Buscar"
-                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-              <span class="input-group-text bg-dark text-light" id="inputGroup-sizing-default">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
-                  viewBox="0 0 16 16">
-                  <path
-                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                </svg>
-              </span>
+    <!-- Modal adicionar -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">Adicionar Alguma Coisa</h1>
+                    <button type="button" class="btn-close bg-light" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-dark text-light"
+                                id="inputGroup-sizing-default">Default</span>
+                            <input type="text" name="#" class="form-control bg-dark text-light"
+                                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-dark text-light"
+                                id="inputGroup-sizing-default">Default</span>
+                            <input type="text" name="" class="form-control bg-dark text-light"
+                                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-dark text-light"
+                                id="inputGroup-sizing-default">Default</span>
+                            <input type="text" name="" class="form-control bg-dark text-light"
+                                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-dark text-light"
+                                id="inputGroup-sizing-default">Default</span>
+                            <input type="text" name="" class="form-control bg-dark text-light"
+                                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer d-flex justify-content-center align-items-center">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        aria-label="Close">Cancelar</button>
+                    <form method="post" aspcontroller="#" aspaction="#">
+                        <button type="button" class="text-center btn btn-success">Salvar</button>
+                    </form>
+                </div>
             </div>
-          </div>
         </div>
-      </nav>
-
-      <!--Conteudo da Seção-->
-      <div class="dashboard-content px-3 pt-4">
-
-        <div class="d-block d-lg-none">
-          <div class="container mt-3" style="max-width: 350px;">
-            <div class="input-group mb-3">
-              <span class="input-group-text bg-dark text-light" id="inputGroup-sizing-default">Buscar</span>
-              <input type="text" class="bg-dark form-control text-light" aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-default">
-            </div>
-          </div>
-        </div>
-
-        <div class="container-fluid bg-black rounded-4 mt-4 p-5">
-          <div class="row row-cols-2 row-cols-md-4">
-            <div class="col bg-warning p-5 mb-4 mr-4">
-              col1
-            </div>
-            <div class="col bg-success p-5 mb-4 mr-4">
-              col2
-            </div>
-            <div class="col bg-primary p-5 mb-4 mr-4">
-              col3
-            </div>
-            <div class="col bg-secondary p-5 mb-4 mr-4">
-              col4
-            </div>
-          </div>
-        </div>
-        
-
-
-
-      </div>
-
-      <!--Footer-->
-      <!-- <footer class="bg-dark text-center text-lg-start">
-
-        <div class="text-center p-4 my-auto bg-dark">
-          © 2024 Copyright:
-          <a class="text-info" href="#">Assenção</a>
-        </div>
-
-      </footer> -->
-
     </div>
 
-  </div>
+    <!--Modal para Atualizar-->
+    <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">Atualizar Alguma Coisa</h1>
+                    <button type="button" class="btn-close bg-light" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-dark text-light"
+                                id="inputGroup-sizing-default">Default</span>
+                            <input type="text" name="#" class="form-control bg-dark text-light"
+                                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-dark text-light"
+                                id="inputGroup-sizing-default">Default</span>
+                            <input type="text" name="" class="form-control bg-dark text-light"
+                                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-dark text-light"
+                                id="inputGroup-sizing-default">Default</span>
+                            <input type="text" name="" class="form-control bg-dark text-light"
+                                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-dark text-light"
+                                id="inputGroup-sizing-default">Default</span>
+                            <input type="text" name="" class="form-control bg-dark text-light"
+                                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer d-flex justify-content-center align-items-center">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        aria-label="Close">Cancelar</button>
+                    <form method="post" aspcontroller="#" aspaction="#">
+                        <button type="button" class="text-center btn btn-warning">Salvar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
+    <!--Modal Excluir-->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">Excluir Itens</h1>
+                    <button type="button" class="btn-close bg-light" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <p class="fs-4 text-light">Voce realmente deseja excluir os itens selecionados?</p>
+                        <p class="fs-5 opacity-50 text-light">Esta ação não tera volta!</p>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-center align-items-center">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        aria-label="Close">Cancelar</button>
+                    <form method="post" aspcontroller="#" aspaction="#">
+                        <button type="button" class="text-center btn btn-danger">Excluir</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
-  <script src="/script/sidebar.js"></script>
+    <!--Modal Date-->
+    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">ERROR</h1>
+                    <button type="button" class="btn-close bg-light" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <p class="fs-4 text-light">Data Inicial Maior ou igual a Final, Confira as datas!</p>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-center align-items-center">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        aria-label="Close">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="/script/filters.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
