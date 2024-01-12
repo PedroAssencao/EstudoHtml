@@ -63,7 +63,8 @@
                         Dashboard
                     </a>
 
-                    <a href="/pages/section1.html" class="btn text-light" onmouseover="$(this).addClass('bg-light text-dark')"
+                    <a href="/pages/section1.html" class="btn text-light"
+                        onmouseover="$(this).addClass('bg-light text-dark')"
                         onmouseout="$(this).removeClass('bg-light text-dark')" style="width: 17rem;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-pen" viewBox="0 0 16 16">
@@ -196,7 +197,7 @@
                     </div>
                 </div>
 
-         
+
 
 
                 <div class="container-fluid bg-black text-light rounded-4 mt-4 p-5">
@@ -280,11 +281,11 @@
                     <thead class="p-5">
 
                         <tr>
-                            <th class="d-flex justify-content-center align-items-center" scope="col">#</th>
+                            <th class="d-flex justify-content-center align-items-center" scope="col">ID</th>
                             </th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
+                            <th scope="col">titulo</th>
+                            <th scope="col">tipo</th>
+                            <th scope="col">alias Produto</th>
                             <th scope="col">Data inicial</th>
                             <th scope="col">Data Final</th>
                             <th colspan="2" scope="col">Ações</th>
@@ -292,277 +293,8 @@
                         </tr>
                     </thead>
                     <tbody id="myTable">
-                        <tr>
-                            <th scope="row">
-                                <div class="form-check">
-                                    <input class="form-check-input checkbox" type="checkbox" value=""
-                                        id="flexCheckDefault">
-                                    1
-                                </div>
-                            </th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td class="date-column">09/10/2024</td>
-                            <td class="date-column">10/10/2024</td>
-                            <td class="d-flex gap-2 justify-content-center align-items-center" style="height: 6rem;">
-                                <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-pen" viewBox="0 0 16 16">
-                                        <path
-                                            d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
-                                    </svg>
-                                </a>
-                                <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
-                                        class="bi bi-x" viewBox="0 0 16 16">
-                                        <path
-                                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
-                                    </svg>
-                                </a>
-                            </td>
 
-                        </tr>
-                        <tr>
-                            <th scope="row">
-                                <div class="form-check">
-                                    <input class="form-check-input checkbox" type="checkbox" value=""
-                                        id="flexCheckDefault">
-                                    2
-                                </div>
-                            </th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                            <td class="date-column">09/10/2024</td>
-                            <td class="date-column">10/10/2024</td>
-                            <td class="d-flex gap-2 justify-content-center align-items-center" style="height: 6rem;">
-                                <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-pen" viewBox="0 0 16 16">
-                                        <path
-                                            d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
-                                    </svg>
-                                </a>
-                                <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
-                                        class="bi bi-x" viewBox="0 0 16 16">
-                                        <path
-                                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
-                                    </svg>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">
-                                <div class="form-check">
-                                    <input class="form-check-input checkbox" type="checkbox" value=""
-                                        id="flexCheckDefault">
-                                    3
-                                </div>
-                            </th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                            <td class="date-column">09/10/2024</td>
-                            <td class="date-column">10/10/2024</td>
-                            <td class="d-flex gap-2 justify-content-center align-items-center" style="height: 6rem;">
-                                <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-pen" viewBox="0 0 16 16">
-                                        <path
-                                            d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
-                                    </svg>
-                                </a>
-                                <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
-                                        class="bi bi-x" viewBox="0 0 16 16">
-                                        <path
-                                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
-                                    </svg>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">
-                                <div class="form-check">
-                                    <input class="form-check-input checkbox" type="checkbox" value=""
-                                        id="flexCheckDefault">
-                                    4
-                                </div>
-                            </th>
-                            <td>Larry the Bird</td>
-                            <td>Larry the Bird</td>
-                            <td>@twitter</td>
-                            <td class="date-column">09/10/2024</td>
-                            <td class="date-column">10/10/2024</td>
-                            <td class="d-flex gap-2 justify-content-center align-items-center" style="height: 6rem;">
-                                <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-pen" viewBox="0 0 16 16">
-                                        <path
-                                            d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
-                                    </svg>
-                                </a>
-                                <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
-                                        class="bi bi-x" viewBox="0 0 16 16">
-                                        <path
-                                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
-                                    </svg>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">
-                                <div class="form-check">
-                                    <input class="form-check-input checkbox" type="checkbox" value=""
-                                        id="flexCheckDefault">
-                                    4
-                                </div>
-                            </th>
-                            <td>Larry the Bird</td>
-                            <td>Larry the Bird</td>
-                            <td>@twitter</td>
-                            <td class="date-column">09/10/2024</td>
-                            <td class="date-column">10/10/2024</td>
-                            <td class="d-flex gap-2 justify-content-center align-items-center" style="height: 6rem;">
-                                <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-pen" viewBox="0 0 16 16">
-                                        <path
-                                            d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
-                                    </svg>
-                                </a>
-                                <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
-                                        class="bi bi-x" viewBox="0 0 16 16">
-                                        <path
-                                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
-                                    </svg>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">
-                                <div class="form-check">
-                                    <input class="form-check-input checkbox" type="checkbox" value=""
-                                        id="flexCheckDefault">
-                                    4
-                                </div>
-                            </th>
-                            <td>Larry the Bird</td>
-                            <td>Larry the Bird</td>
-                            <td>@twitter</td>
-                            <td class="date-column">09/10/2024</td>
-                            <td class="date-column">10/10/2024</td>
-                            <td class="d-flex gap-2 justify-content-center align-items-center" style="height: 6rem;">
-                                <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-pen" viewBox="0 0 16 16">
-                                        <path
-                                            d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
-                                    </svg>
-                                </a>
-                                <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
-                                        class="bi bi-x" viewBox="0 0 16 16">
-                                        <path
-                                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
-                                    </svg>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">
-                                <div class="form-check">
-                                    <input class="form-check-input checkbox" type="checkbox" value=""
-                                        id="flexCheckDefault">
-                                    4
-                                </div>
-                            </th>
-                            <td>Larry the Bird</td>
-                            <td>Larry the Bird</td>
-                            <td>@twitter</td>
-                            <td class="date-column">09/10/2024</td>
-                            <td class="date-column">10/10/2024</td>
-                            <td class="d-flex gap-2 justify-content-center align-items-center" style="height: 6rem;">
-                                <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-pen" viewBox="0 0 16 16">
-                                        <path
-                                            d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
-                                    </svg>
-                                </a>
-                                <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
-                                        class="bi bi-x" viewBox="0 0 16 16">
-                                        <path
-                                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
-                                    </svg>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">
-                                <div class="form-check">
-                                    <input class="form-check-input checkbox" type="checkbox" value=""
-                                        id="flexCheckDefault">
-                                    4
-                                </div>
-                            </th>
-                            <td>Larry the Bird</td>
-                            <td>Larry the Bird</td>
-                            <td>@twitter</td>
-                            <td class="date-column">09/10/2024</td>
-                            <td class="date-column">10/10/2024</td>
-                            <td class="d-flex gap-2 justify-content-center align-items-center" style="height: 6rem;">
-                                <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-pen" viewBox="0 0 16 16">
-                                        <path
-                                            d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
-                                    </svg>
-                                </a>
-                                <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
-                                        class="bi bi-x" viewBox="0 0 16 16">
-                                        <path
-                                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
-                                    </svg>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">
-                                <div class="form-check">
-                                    <input class="form-check-input checkbox" type="checkbox" value=""
-                                        id="flexCheckDefault">
-                                    5
-                                </div>
-                            </th>
-                            <td>Larry the Bird</td>
-                            <td>Larry the Bird</td>
-                            <td>@twitter</td>
-                            <td class="date-column">11/10/2024</td>
-                            <td class="date-column">12/10/2024</td>
-                            <td class="d-flex gap-2 justify-content-center align-items-center" style="height: 6rem;">
-                                <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-pen" viewBox="0 0 16 16">
-                                        <path
-                                            d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
-                                    </svg>
-                                </a>
-                                <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
-                                        class="bi bi-x" viewBox="0 0 16 16">
-                                        <path
-                                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
-                                    </svg>
-                                </a>
-                            </td>
-                        </tr>
+
                     </tbody>
                     </table>
 
@@ -571,6 +303,24 @@
 
 
                 </div>
+
+                <nav aria-label="Page navigation example bg-dark">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item">
+                            <a class="page-link bg-dark" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link bg-dark" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link bg-dark" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link bg-dark" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link bg-dark" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
                 <!--Footer-->
                 <div
                     class="container-fluid d-flex justify-content-center mt-5 align-items-center gap-2 flex-column text-light rounded-4 mt-4 p-4">
@@ -739,9 +489,60 @@
         </div>
     </div>
 
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+
+        var currentPage = 1;
+        var itemsPerPage = 10; // Defina o número de itens por página
+
+
+        $.get("https://servicodados.ibge.gov.br/api/v3/calendario/", function (data) {
+            // Extrair os primeiros 20 itens
+
+
+            data.items.slice(0,20).forEach(element => {
+                var tabela = document.getElementById('myTable');
+                console.log(element);
+                tabela.innerHTML += `
+        <tr>
+                <th scope="row">
+                    <div class="form-check">
+                        <input class="form-check-input checkbox" type="checkbox" value=""
+                            id="flexCheckDefault">
+                        ${element.id}
+                    </div>
+                </th>
+                <td>${element.titulo}</td>
+                <td>${element.tipo}</td>
+                <td>${element.alias_produto}</td>
+                <td class="date-column">${element.mes_referencia_inicio}/${element.ano_referencia_inicio}</td>
+                <td class="date-column">${element.mes_referencia_fim}/${element.ano_referencia_fim}</td>
+                <td class="d-flex gap-2 justify-content-center align-items-center" style="height: 6rem;">
+                    <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-pen" viewBox="0 0 16 16">
+                            <path
+                                d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
+                        </svg>
+                    </a>
+                    <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                            class="bi bi-x" viewBox="0 0 16 16">
+                            <path
+                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                        </svg>
+                    </a>
+                </td>
+            </tr>
+        `;
+
+            });
+        });
+
+    </script>
 
     <script src="/script/filters.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
