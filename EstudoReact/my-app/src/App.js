@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <div className='container-fluid d-flex justify-content-center flex-column text-center'>
-        <Navbar></Navbar>
+        <Navbar/>
       </div>
       <Routes>
         <Route path='/' element={<Empresa />} />
