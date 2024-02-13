@@ -31,8 +31,7 @@ function Centro({ locate }) {
                         img={data.weather[0].icon}
                         temp={data.main.temp}
                         humidity={data.main.humidity}
-                        wind={data.wind.speed}
-                        
+                        wind={data.wind.speed}                        
                     />
                 </>
             ) }
