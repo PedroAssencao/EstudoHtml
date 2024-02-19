@@ -1,0 +1,23 @@
+body {
+    overflow-y: hidden;
+}
+
+.bodyFull {
+    background: hsla(252, 66%, 20%, 1);
+    background: linear-gradient(to bottom, hsla(252, 66%, 20%, 1) 13%, hsla(252, 66%, 20%, 1) 13%, hsla(252, 66%, 20%, 1) 13%, hsla(0, 0%, 0%, 1) 46%);
+    background: -moz-linear-gradient(to bottom, hsla(252, 66%, 20%, 1) 13%, hsla(252, 66%, 20%, 1) 13%, hsla(252, 66%, 20%, 1) 13%, hsla(0, 0%, 0%, 1) 46%);
+    background: -webkit-linear-gradient(to bottom, hsla(252, 66%, 20%, 1) 13%, hsla(252, 66%, 20%, 1) 13%, hsla(252, 66%, 20%, 1) 13%, hsla(0, 0%, 0%, 1) 46%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#1E1153", endColorstr="#1E1153", GradientType=1);
+}
+
+
+html {
+
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: hsla(0, 0%, 100%, .3);
+    }
+}
