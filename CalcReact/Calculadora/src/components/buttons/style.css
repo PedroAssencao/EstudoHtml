@@ -1,0 +1,15 @@
+.BtnNumero{
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    color: white;
+    transition: 0.2s linear; 
+}
+
+.BtnNumero:hover{
+    opacity: 1.0; 
+    background-color: brown;
+}
