@@ -1,0 +1,18 @@
+body{  
+    display: flex;
+    align-items: center;    
+    min-width: 100vw;
+    min-height: 100vh;
+    justify-content: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.app{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+} 
+.itemApp{
+    display: flex;
+    flex-direction: row;
+}
