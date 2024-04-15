@@ -1,0 +1,12 @@
+.App{
+  border: 3px solid black;
+  min-width: 20vw;
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+}
+
+.titulo{
+  margin-top: 2rem;
+  color: black;
+}
