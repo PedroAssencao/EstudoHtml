@@ -1,7 +1,8 @@
 function Buttons(props){
+  const NameClass = props.nameClass
     return(
         <div>
-          <button></button>
+          <button className={NameClass} onClick={props.onClick}>{props.name}</button>
         </div>
     )
 }

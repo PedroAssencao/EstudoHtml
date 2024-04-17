@@ -2,11 +2,11 @@
   border: 3px solid black;
   min-width: 20vw;
   min-height: 60vh;
-  display: flex;
-  justify-content: center;
+  margin-top: 11rem;
 }
 
 .titulo{
-  margin-top: 2rem;
-  color: black;
+  
+  text-align: center;
+
 }
