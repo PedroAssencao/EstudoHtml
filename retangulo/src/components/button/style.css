@@ -1,0 +1,6 @@
+button {
+    min-width: 10rem;
+    padding: 4px;
+    color: white;
+    cursor: pointer;
+}
