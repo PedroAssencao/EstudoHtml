@@ -1,0 +1,10 @@
+.App{
+    min-height: 70vh;
+    width: 96%;
+    border: solid black 1px;
+    padding: 1rem;
+}
+
+.containermassa{
+    margin-top: 6%;
+}
