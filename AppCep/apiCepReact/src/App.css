@@ -1,0 +1,22 @@
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: solid black 2px;
+}
+
+.layout{
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 3rem;
+  padding: 3rem;
+}
+
+.Resultado{
+  padding: 2rem;
+  min-height: 10vh;
+  min-width: 10vw;
+  border: solid black 2px;
+}
